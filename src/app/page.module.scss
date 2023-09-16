@@ -1,0 +1,115 @@
+.header_wrapper {
+  position: relative;
+  aspect-ratio: 18 / 9;
+  background-image: url("/matt_bk.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+
+  img {
+    margin-bottom: 0.83em;
+  }
+
+  h1 {
+    margin: 0 4em;
+    padding-bottom: 0.83em;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    animation: bounce 2s;
+  }
+
+  h2 {
+    font-weight: 400;
+    line-height: 1.5;
+    animation: slideInDown !important;
+  }
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 5em;
+
+  .content_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+      margin: 1em 0;
+      flex-basis: 50%;
+    }
+
+    .img_wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    h2 {
+      font-weight: 400;
+      line-height: 27px;
+      color: rgb(27, 27, 27);
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 24px;
+      color: rgb(94, 94, 94);
+      padding-right: 32px;
+    }
+  }
+}
+
+.social_links {
+  margin: 1em 0;
+  padding: 3em 0;
+  background: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  gap: 28px;
+
+  a,
+  a:focus,
+  a:visited {
+    color: rgb(94, 94, 94);
+    transition: color 0.25s ease-in-out;
+  }
+  a:hover {
+    color: #17233D !important;
+  }
+}
+
+.footer {
+  padding: 4em 0 2em 0;
+  text-align: center;
+  font-size: 80%;
+  color: rgb(94, 94, 94);
+}
+
+@media (max-width: 900px) {
+  .header_wrapper {
+    aspect-ratio: 11 / 9;
+  }
+
+  .main {
+    padding: 2em;
+    .content_grid > div {
+      flex-basis: 100%;
+    }
+  }
+}
