@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <header className={styles.header_wrapper}>
         <div className={styles.header}>
-          <Image src="/monogram_white.png" width={40} height={40} alt="" />
+          <Image src="monogram_white.png" width={40} height={40} alt="" />
           <h1
             className={
               libre_baskerville.className + " animate__animated animate__bounce"
@@ -44,7 +44,7 @@ export default function Home() {
           <div>
             <h2>Education</h2>
             <div className={styles.img_wrap}>
-              <Image src="/colgate.png" alt="" width={75} height={75} />
+              <Image src="colgate.png" alt="" width={75} height={75} />
               <p>
                 <strong>Colgate University</strong>
                 <br />
@@ -58,7 +58,7 @@ export default function Home() {
           <div>
             <h2>Work</h2>
             <div className={styles.img_wrap}>
-              <Image src="/blackrock.jpeg" alt="" width={75} height={75} />
+              <Image src="blackrock.jpeg" alt="" width={75} height={75} />
               <p>
                 <strong>BlackRock</strong>
                 <br />
