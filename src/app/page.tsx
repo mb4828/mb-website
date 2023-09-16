@@ -10,6 +10,7 @@ import {
   faSquareThreads,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import bk from "../../public/matt_bk.jpg";
 
 const libre_baskerville = Libre_Baskerville({
   weight: "400",
@@ -21,7 +22,10 @@ const today = new Date();
 export default function Home() {
   return (
     <>
-      <header className={styles.header_wrapper}>
+      <header
+        className={styles.header_wrapper}
+        style={{ backgroundImage: `url(${bk.src})` }}
+      >
         <div className={styles.header}>
           <Image src="monogram_white.png" width={40} height={40} alt="" />
           <h1
