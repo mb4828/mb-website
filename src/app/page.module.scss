@@ -1,3 +1,5 @@
+@import '../../node_modules/animate.css/source/fading_entrances/fadeInDown';
+
 .header_wrapper {
   position: relative;
   aspect-ratio: 18 / 9;
@@ -12,31 +14,48 @@
   top: 50%;
   text-align: center;
   color: #fff;
+  animation: fadeInDown 1s;
 
   img {
     margin-bottom: 0.83em;
   }
 
   h1 {
-    margin: 0 4em;
+    margin: 0;
     padding-bottom: 0.83em;
-    border-bottom: 1px solid #fff;
     text-transform: uppercase;
     font-weight: 400;
-    animation: bounce 2s;
+    font-size: 2.5em;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px solid #fff;
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   h2 {
     font-weight: 400;
-    line-height: 1.5;
-    animation: slideInDown !important;
+    line-height: 1.6;
   }
+}
+
+.lead {
+  margin: 0;
+  padding: 3em 2em;
+  text-align: center;
+  font-size: larger;
+  font-style: italic;
+  line-height: 1.6;
+  background: var(--gray-bkg);
 }
 
 .main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2em 5em;
+  padding: 2em;
 
   .content_grid {
     display: flex;
@@ -61,22 +80,25 @@
     h2 {
       font-weight: 400;
       line-height: 27px;
-      color: rgb(27, 27, 27);
     }
 
     p {
+      padding-right: 32px;
       font-weight: 400;
       line-height: 24px;
-      color: rgb(94, 94, 94);
-      padding-right: 32px;
+      color: var(--gray-txt);
+    }
+
+    ul {
+      padding: 1em;
+      margin: 0;
+      line-height: 1.6;
+      color: var(--gray-txt);
     }
   }
 }
 
 .social_links {
-  margin: 1em 0;
-  padding: 3em 0;
-  background: rgb(246, 246, 246);
   display: flex;
   justify-content: center;
   line-height: 40px;
@@ -85,28 +107,33 @@
   a,
   a:focus,
   a:visited {
-    color: rgb(94, 94, 94);
+    color: var(--gray-txt);
     transition: color 0.25s ease-in-out;
   }
   a:hover {
-    color: #17233d !important;
+    color: var(--navy-primary) !important;
   }
 }
 
 .footer {
-  padding: 4em 0 2em 0;
+  padding: 3em 0;
   text-align: center;
   font-size: 80%;
-  color: rgb(94, 94, 94);
+  color: var(--gray-txt);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .header_wrapper {
-    aspect-ratio: 11 / 9;
+    aspect-ratio: 7 / 9;
+  }
+
+  .header {
+    h1 {
+      font-size: 2em;
+    }
   }
 
   .main {
-    padding: 2em;
     .content_grid > div {
       flex-basis: 100%;
     }

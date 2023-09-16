@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import { Libre_Baskerville } from 'next/font/google';
+import { Source_Serif_4 } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookSquare,
@@ -11,13 +11,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import bk from '../../public/matt_bk.jpg';
+import { faClipboardCheck, faMedal, faTrophy } from '@fortawesome/free-solid-svg-icons';
 
-const libre_baskerville = Libre_Baskerville({
-  weight: '400',
-  subsets: ['latin'],
-});
+const source_serif = Source_Serif_4({ subsets: ['latin'] });
 
 const today = new Date();
+const yearsExp = today.getFullYear() - 2015;
 
 export default function Home() {
   return (
@@ -25,7 +24,8 @@ export default function Home() {
       <header className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
         <div className={styles.header}>
           <Image src="monogram_white.png" width={40} height={40} alt="" />
-          <h1 className={libre_baskerville.className}>Matt Brauner</h1>
+          <h1 className={source_serif.className}>Matt Brauner</h1>
+          <hr />
           <h2>
             Senior Software Engineer
             <br />
@@ -33,6 +33,11 @@ export default function Home() {
           </h2>
         </div>
       </header>
+
+      <p className={styles.lead}>
+        Senior technologist with {yearsExp} years of professional experience in full-stack web development, financial
+        technology, and data analysis.
+      </p>
 
       <main className={styles.main}>
         <div className={styles.content_grid}>
@@ -66,7 +71,14 @@ export default function Home() {
 
           <div>
             <h2>Skills</h2>
-            <p>Full-stack web development, financial technology, and data analysis</p>
+            <ul>
+              <li>Top 5% of Front End Developers</li>
+              <li>Top 5% of JavaScript Developers</li>
+              <li>Top 15% of Python Developers</li>
+            </ul>
+            <p>
+              <small>* Based on LinkedIn skill assessment</small>
+            </p>
           </div>
 
           <div>

@@ -12,7 +12,7 @@ const opensans = Open_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Matt Brauner | Senior Software Engineer, New York, NY',
   description:
-    'Accomplished technologist with professional experience in full-stack web development, financial technology, and data analysis',
+    'Senior technologist with professional experience in full-stack web development, financial technology, and data analysis',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
