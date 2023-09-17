@@ -57,8 +57,8 @@ export default function Home() {
       </header>
 
       <p className={`${styles.lead} ${styles.reveal}`}>
-        Senior technologist with {yearsExp} years of professional experience in full-stack web development, financial
-        technology, and data analysis.
+        I'm a senior technologist with {yearsExp} years of professional experience in full-stack web development,
+        financial technology, and data analysis. Thanks for stopping by my website.
       </p>
 
       <main className={styles.main}>
@@ -72,7 +72,7 @@ export default function Home() {
                 <br />
                 Bachelor of Arts | Computer Science & Economics
                 <br />
-                2011 &ndash; 2015
+                <span className="text-muted">2011 &ndash; 2015</span>
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
                 <br />
                 Vice President | Senior Software Engineer II
                 <br />
-                2015 &ndash; Present
+                <span className="text-muted">2015 &ndash; Present</span>
               </p>
             </div>
           </div>
@@ -95,21 +95,16 @@ export default function Home() {
             <h2>Skills</h2>
             <ul>
               <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#000' }} /> Top 5% of Front End
-                Developers
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4 }} /> Top 5% of Front End Developers
               </li>
               <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#000' }} /> Top 5% of JavaScript
-                Developers
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4 }} /> Top 5% of JavaScript Developers
               </li>
               <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#000' }} /> Top 15% of Python
-                Developers
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4 }} /> Top 15% of Python Developers
               </li>
             </ul>
-            <p>
-              <small>(Based on LinkedIn skill assessment)</small>
-            </p>
+            <p className="text-muted">Based on LinkedIn skill assessment</p>
           </div>
 
           <div className={styles.reveal}>
@@ -119,53 +114,53 @@ export default function Home() {
         </div>
       </main>
 
-      <div className={`${styles.social_links}`}>
-        <Link
-          className="fb"
-          href="http://facebook.com/matt.brauner/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-        >
-          <FontAwesomeIcon icon={faFacebookSquare} size="2xl" />
-        </Link>
-
-        <Link
-          className="ig"
-          href="http://instagram.com/matt.brauner/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-        >
-          <FontAwesomeIcon icon={faInstagramSquare} size="2xl" />
-        </Link>
-
-        <Link
-          className="thr"
-          href="https://www.threads.net/@matt.brauner"
-          target="_blank"
-          rel="noopener"
-          aria-label="Threads"
-        >
-          <FontAwesomeIcon icon={faSquareThreads} size="2xl" />
-        </Link>
-
-        <Link
-          className="li"
-          href="http://linkedin.com/in/matt-brauner/"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-        >
-          <FontAwesomeIcon icon={faLinkedin} size="2xl" />
-        </Link>
-
-        <Link href="http://github.com/mb4828" className="gh" target="_blank" rel="noopener" aria-label="GitHub">
-          <FontAwesomeIcon icon={faGithubSquare} size="2xl" />
-        </Link>
-      </div>
-
       <footer className={styles.footer}>
+        <div className={`${styles.social_links}`}>
+          <Link
+            className="fb"
+            href="http://facebook.com/matt.brauner/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
+            <FontAwesomeIcon icon={faFacebookSquare} size="2xl" />
+          </Link>
+
+          <Link
+            className="ig"
+            href="http://instagram.com/matt.brauner/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <FontAwesomeIcon icon={faInstagramSquare} size="2xl" />
+          </Link>
+
+          <Link
+            className="thr"
+            href="https://www.threads.net/@matt.brauner"
+            target="_blank"
+            rel="noopener"
+            aria-label="Threads"
+          >
+            <FontAwesomeIcon icon={faSquareThreads} size="2xl" />
+          </Link>
+
+          <Link
+            className="li"
+            href="http://linkedin.com/in/matt-brauner/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="2xl" />
+          </Link>
+
+          <Link href="http://github.com/mb4828" className="gh" target="_blank" rel="noopener" aria-label="GitHub">
+            <FontAwesomeIcon icon={faGithubSquare} size="2xl" />
+          </Link>
+        </div>
+
         <p>Copyright &copy; {today.getFullYear()} Matt Brauner</p>
         <p>
           <Link href="https://github.com/mb4828/mb-website" target="_blank" rel="noopener">

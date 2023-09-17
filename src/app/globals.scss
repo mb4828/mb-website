@@ -1,7 +1,8 @@
 :root {
-  --navy-primary: #17233d;
-  --gray-txt: rgb(94, 94, 94);
-  --gray-bkg: rgb(246, 246, 246);
+  --primary-color: #17233d;
+  --secondary-color: #125e8a;
+  --dark-gray: rgba(0, 0, 0, 0.6);
+  --light-gray: #f6f6f6;
 }
 
 html,
@@ -9,8 +10,49 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100vw;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 1.6;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 0.83em;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #fff;
+  width: 75%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-weight: 400;
 }
 
 strong {
   font-weight: 600;
+}
+
+small {
+  color: var(--dark-gray);
+}
+
+a,
+a:focus,
+a:visited,
+a:hover {
+  color: var(--secondary-color);
+}
+
+.text-muted {
+  color: var(--dark-gray);
 }
