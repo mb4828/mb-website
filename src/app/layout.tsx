@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description:
     'Senior technologist with professional experience in full-stack web development, financial technology, and data analysis',
   icons: { icon: 'monogram_navybk.png' },
+  themeColor: '#17233d',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -62,7 +62,7 @@ export default function Chat() {
   return (
     <>
       <div className={styles.chat_button_wrapper}>
-        <Button size="lg" onClick={openChat} className={styles.chat_button}>
+        <Button size="lg" onClick={openChat} className={styles.chat_button} aria-label="Contact Me">
           <FontAwesomeIcon icon={isOpen ? faXmark : faMessage} size="xl" flip="horizontal" fixedWidth />
         </Button>
       </div>
