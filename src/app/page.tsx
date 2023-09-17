@@ -57,7 +57,7 @@ export default function Home() {
       </header>
 
       <p className={`${styles.lead} ${styles.reveal}`}>
-        I'm a senior technologist with {yearsExp} years of professional experience in full-stack web development,
+        I&apos;m a senior technologist with {yearsExp} years of professional experience in full-stack web development,
         financial technology, and data analysis. Thanks for stopping by my website.
       </p>
 
