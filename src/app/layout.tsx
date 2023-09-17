@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Matt Brauner | Senior Software Engineer, New York, NY',
   description:
     'Senior technologist with professional experience in full-stack web development, financial technology, and data analysis',
+  icons: { icon: 'monogram_navybk.png' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

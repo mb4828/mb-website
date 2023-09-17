@@ -1,5 +1,7 @@
-import Image from 'next/image';
+'use client';
+
 import styles from './page.module.scss';
+import { useEffect } from 'react';
 import { Source_Serif_4 } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -9,16 +11,36 @@ import {
   faLinkedin,
   faSquareThreads,
 } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 import Link from 'next/link';
 import bk from '../../public/matt_bk.jpg';
-import { faClipboardCheck, faMedal, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faAward } from '@fortawesome/free-solid-svg-icons';
+import Chat from './chat';
 
 const source_serif = Source_Serif_4({ subsets: ['latin'] });
 
-const today = new Date();
-const yearsExp = today.getFullYear() - 2015;
-
 export default function Home() {
+  const today = new Date();
+  const yearsExp = today.getFullYear() - 2015;
+
+  // make elements appear on scroll
+  function reveal() {
+    const reveals = document.querySelectorAll(`.${styles.reveal}`);
+    for (var i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add(`${styles.reveal_active}`);
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', reveal);
+    reveal();
+  }, []);
+
   return (
     <>
       <header className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
@@ -34,14 +56,14 @@ export default function Home() {
         </div>
       </header>
 
-      <p className={styles.lead}>
+      <p className={`${styles.lead} ${styles.reveal}`}>
         Senior technologist with {yearsExp} years of professional experience in full-stack web development, financial
         technology, and data analysis.
       </p>
 
       <main className={styles.main}>
         <div className={styles.content_grid}>
-          <div>
+          <div className={styles.reveal}>
             <h2>Education</h2>
             <div className={styles.img_wrap}>
               <Image src="colgate.png" alt="" width={75} height={75} />
@@ -55,7 +77,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className={styles.reveal}>
             <h2>Work</h2>
             <div className={styles.img_wrap}>
               <Image src="blackrock.jpeg" alt="" width={75} height={75} />
@@ -69,26 +91,35 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className={styles.reveal}>
             <h2>Skills</h2>
             <ul>
-              <li>Top 5% of Front End Developers</li>
-              <li>Top 5% of JavaScript Developers</li>
-              <li>Top 15% of Python Developers</li>
+              <li>
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#000' }} /> Top 5% of Front End
+                Developers
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#000' }} /> Top 5% of JavaScript
+                Developers
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#000' }} /> Top 15% of Python
+                Developers
+              </li>
             </ul>
             <p>
-              <small>* Based on LinkedIn skill assessment</small>
+              <small>(Based on LinkedIn skill assessment)</small>
             </p>
           </div>
 
-          <div>
+          <div className={styles.reveal}>
             <h2>Interests</h2>
             <p>Clarinetist with a passion for art, science, technology, and aviation</p>
           </div>
         </div>
       </main>
 
-      <div className={styles.social_links}>
+      <div className={`${styles.social_links}`}>
         <Link className="fb" href="http://facebook.com/matt.brauner/" target="_blank" rel="noopener">
           <FontAwesomeIcon icon={faFacebookSquare} size="2xl" />
         </Link>
@@ -110,7 +141,16 @@ export default function Home() {
         </Link>
       </div>
 
-      <footer className={styles.footer}>Copyright &copy; {today.getFullYear()} Matt Brauner</footer>
+      <footer className={styles.footer}>
+        <p>Copyright &copy; {today.getFullYear()} Matt Brauner</p>
+        <p>
+          <Link href="https://github.com/mb4828/mb-website" target="_blank" rel="noopener">
+            View the code for this webapp
+          </Link>
+        </p>
+      </footer>
+
+      <Chat />
     </>
   );
 }
