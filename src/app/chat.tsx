@@ -76,7 +76,7 @@ export default function Chat() {
               <Avatar src="matt_bk.jpg" />
               <div className={styles.message}>
                 <Card variant="soft" size="sm">
-                  Thanks for visiting! Send me a chat if you'd like to get in touch
+                  Thanks for visiting! Send me a chat if you&apos;d like to get in touch
                 </Card>
                 <small>Matt</small>
               </div>
@@ -133,7 +133,8 @@ export default function Chat() {
               <Avatar src="matt_bk.jpg" />
               <div className={styles.message}>
                 <Card variant="soft" size="sm">
-                  Your message has been sent. I'll respond via e-mail as soon as I can. This conversation is now closed
+                  Your message has been sent. I&apos;ll respond via e-mail as soon as I can. This conversation is now
+                  closed
                 </Card>
                 <small>Matt (Automated)</small>
               </div>
