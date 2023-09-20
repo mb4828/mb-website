@@ -63,15 +63,18 @@
   }
 
   .chat_footer {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: space-between;
     padding: 12px;
 
-    textarea {
-      width: 500px;
+    form {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      div {
+        width: 100%;
+      }
     }
   }
 }

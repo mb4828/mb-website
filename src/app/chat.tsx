@@ -23,11 +23,12 @@ export default function Chat() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isOpen = Boolean(anchorEl);
 
-  const [conversationEl, setConversationEl] = useState<null | HTMLElement>(null);
+  const [conversationEl, setConversationEl] = useState<HTMLElement | null>(null);
   const [conversationState, setConversationState] = useState(ConversationState.AwaitMessage);
   const [conversationMessage, setConversationMessage] = useState('');
   const [conversationName, setConversationName] = useState('');
   const [conversationEmail, setConversationEmail] = useState('');
+  const [conversationTextarea, setConversationTextarea] = useState<HTMLTextAreaElement | null>(null);
 
   // open and close the chat window
   function openChat(event: React.MouseEvent<HTMLElement>) {
@@ -40,18 +41,30 @@ export default function Chat() {
   }
 
   // advance the conversation and record messages from the user
-  function advanceConversation() {
-    if (conversationState >= ConversationState.Closed) {
-      return;
-    } else if (conversationState === ConversationState.AwaitMessage) {
-      // todo
-    } else if (conversationState === ConversationState.AwaitName) {
-      // todo
-    } else if (conversationState === ConversationState.AwaitEmail) {
-      // todo
+  function advanceConversation(e: any) {
+    if (e.type === 'submit' || (e.type === 'keyup' && e.key === 'Enter' && !e.shiftKey)) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      let value = '';
+      if (conversationTextarea) {
+        value = conversationTextarea.value;
+        conversationTextarea.value = ''; // clear input
+      }
+
+      if (conversationState >= ConversationState.Closed) {
+        return;
+      } else if (conversationState === ConversationState.AwaitMessage) {
+        setConversationMessage(value);
+      } else if (conversationState === ConversationState.AwaitName) {
+        setConversationName(value);
+      } else if (conversationState === ConversationState.AwaitEmail) {
+        setConversationEmail(value);
+      }
+
+      _advanceConversationHelper(1); // show user input
+      setTimeout(() => _advanceConversationHelper(2), 1000); // show response
     }
-    _advanceConversationHelper(1); // show user input
-    setTimeout(() => _advanceConversationHelper(2), 1000); // show response
   }
 
   // hide messages until conversation has reached a certain state
@@ -144,27 +157,32 @@ export default function Chat() {
           </CardOverflow>
 
           <CardOverflow variant="soft" className={styles.chat_footer}>
-            <Textarea
-              placeholder={
-                conversationState === ConversationState.Closed
-                  ? 'Conversation closed'
-                  : conversationState % 2 !== 0
-                  ? 'Loading...'
-                  : 'Type a message'
-              }
-              size="sm"
-              maxRows={3}
-              disabled={conversationState % 2 !== 0 || conversationState === ConversationState.Closed}
-            />
-            <Button
-              size="sm"
-              variant="solid"
-              style={{ background: '#17233d' }}
-              disabled={conversationState % 2 !== 0 || conversationState === ConversationState.Closed}
-              onClick={advanceConversation}
-            >
-              <FontAwesomeIcon icon={faPaperPlane} />
-            </Button>
+            <form onSubmit={advanceConversation}>
+              <Textarea
+                ref={(ref) => setConversationTextarea(ref?.firstChild as HTMLTextAreaElement)}
+                onKeyUp={advanceConversation}
+                placeholder={
+                  conversationState === ConversationState.Closed
+                    ? 'Conversation closed'
+                    : conversationState % 2 !== 0
+                    ? 'Loading...'
+                    : 'Type a message'
+                }
+                size="sm"
+                maxRows={3}
+                disabled={conversationState % 2 !== 0 || conversationState === ConversationState.Closed}
+              />
+
+              <Button
+                type="submit"
+                size="sm"
+                variant="solid"
+                style={{ background: '#17233d' }}
+                disabled={conversationState % 2 !== 0 || conversationState === ConversationState.Closed}
+              >
+                <FontAwesomeIcon icon={faPaperPlane} />
+              </Button>
+            </form>
           </CardOverflow>
         </Card>
       </Popper>
