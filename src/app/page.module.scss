@@ -75,15 +75,6 @@
     justify-content: center;
     line-height: 40px;
     gap: 28px;
-
-    a,
-    a:focus,
-    a:visited {
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      transform: scale(1.07);
-    }
   }
 
   p {

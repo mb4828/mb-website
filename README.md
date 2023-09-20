@@ -4,7 +4,7 @@ This is a scratch-built personal website built using [React](https://react.dev) 
 
 Copyright &copy; 2023 Matt Brauner. All rights reserved. 
 
-⚠️ The code in this GitHub repository may not be used or reproduced without explicit permission from the owner.
+The code in this GitHub repository may not be used or reproduced without explicit permission from the owner.
 
 ## Getting Started
 

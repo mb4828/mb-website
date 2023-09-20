@@ -42,16 +42,15 @@ export default function Chat() {
 
   // advance the conversation and record messages from the user
   function advanceConversation(e: any) {
-    if (e.type === 'submit' || (e.type === 'keyup' && e.key === 'Enter' && !e.shiftKey)) {
-      e.preventDefault();
-      e.stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
 
-      let value = '';
-      if (conversationTextarea) {
-        value = conversationTextarea.value;
-        conversationTextarea.value = ''; // clear input
-      }
-
+    if (
+      conversationTextarea &&
+      conversationTextarea.value.trim().length > 0 &&
+      (e.type === 'submit' || (e.type === 'keyup' && e.key === 'Enter' && !e.shiftKey))
+    ) {
+      const value = conversationTextarea?.value || '';
       if (conversationState >= ConversationState.Closed) {
         return;
       } else if (conversationState === ConversationState.AwaitMessage) {
@@ -62,6 +61,9 @@ export default function Chat() {
         setConversationEmail(value);
       }
 
+      if (conversationTextarea) {
+        conversationTextarea.value = ''; // clear input
+      }
       _advanceConversationHelper(1); // show user input
       setTimeout(() => _advanceConversationHelper(2), 1000); // show response
     }
