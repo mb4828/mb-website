@@ -25,13 +25,6 @@
   }
 }
 
-.lead {
-  margin: 0;
-  padding: 2em;
-  text-align: center;
-  background: var(--light-gray);
-}
-
 .main {
   max-width: 1200px;
   margin: 0 auto;
@@ -45,6 +38,10 @@
     div {
       margin: 1em 0;
       flex-basis: 50%;
+    }
+
+    .full_width {
+      flex-basis: 100%;
     }
 
     .img_wrap {

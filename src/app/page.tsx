@@ -56,16 +56,16 @@ export default function Home() {
         </div>
       </header>
 
-      <div className={`${styles.lead} ${styles.reveal}`}>
-        <h2>About</h2>
-        <p>
-          I&apos;m a senior technologist with {yearsExp} years of professional experience in full-stack web development,
-          financial technology, and data analysis.
-        </p>
-      </div>
-
       <main className={styles.main}>
         <div className={styles.content_grid}>
+          <div className={`${styles.full_width} ${styles.reveal}`}>
+            <h2>About</h2>
+            <p>
+              I&apos;m a senior technologist with {yearsExp} years of professional experience in full-stack web
+              development, financial technology, and data analysis.
+            </p>
+          </div>
+
           <div className={styles.reveal}>
             <h2>Education</h2>
             <div className={styles.img_wrap}>

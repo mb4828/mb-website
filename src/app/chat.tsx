@@ -1,5 +1,6 @@
 'use client';
 
+import axios from 'axios';
 import styles from './chat.module.scss';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import { faPaperPlane, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -35,13 +36,23 @@ export default function Chat() {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   }
 
-  function _advanceConversationHelper(amount: number) {
+  // send an email notification to Matt
+  async function sendEmail() {
+    const body = { name: conversationName, email: conversationEmail, message: conversationMessage };
+    const response = await axios.post('https://f22uyn4vtfmymrei6jdxtm6f7u0xomsz.lambda-url.us-east-1.on.aws/', body);
+    console.log(response);
+  }
+
+  async function _advanceConversationHelper(amount: number) {
+    if (ConversationState.EmailReceived === conversationState + amount) {
+      await sendEmail();
+    }
     setConversationState(conversationState + amount);
     conversationEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
   }
 
   // advance the conversation and record messages from the user
-  function advanceConversation(e: any) {
+  async function advanceConversation(e: any) {
     e.preventDefault();
     e.stopPropagation();
 
@@ -64,7 +75,7 @@ export default function Chat() {
       if (conversationTextarea) {
         conversationTextarea.value = ''; // clear input
       }
-      _advanceConversationHelper(1); // show user input
+      await _advanceConversationHelper(1); // show user input
       setTimeout(() => _advanceConversationHelper(2), 1000); // show response
     }
   }

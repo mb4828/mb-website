@@ -48,8 +48,12 @@ small {
 
 a,
 a:focus,
-a:visited,
+a:visited {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
 a:hover {
+  text-decoration: underline;
   color: var(--secondary-color);
 }
 
