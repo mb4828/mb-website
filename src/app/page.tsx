@@ -45,7 +45,7 @@ export default function Home() {
     <>
       <header className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
         <div className={styles.header}>
-          <Image src="monogram_white.png" width={40} height={40} alt="" />
+          <Image src="monogram_white.png" width={40} height={40} alt="" priority={true} />
           <h1 className={source_serif.className}>Matt Brauner</h1>
           <hr />
           <h2>
