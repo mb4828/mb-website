@@ -98,13 +98,16 @@ export default function Home() {
             <h2>Skills</h2>
             <ul>
               <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4 }} /> Top 5% of Front End Developers
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#125e8a' }} /> Top 5% of Front End
+                Developers
               </li>
               <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4 }} /> Top 5% of JavaScript Developers
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#125e8a' }} /> Top 5% of JavaScript
+                Developers
               </li>
               <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4 }} /> Top 15% of Python Developers
+                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#125e8a' }} /> Top 15% of Python
+                Developers
               </li>
             </ul>
             <p className="text-muted">Based on LinkedIn skill assessment</p>

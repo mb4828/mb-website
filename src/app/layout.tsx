@@ -1,5 +1,6 @@
 import './globals.scss';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Open_Sans } from 'next/font/google';
 
 // font awesome
@@ -20,6 +21,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YT3V2M6W5C" />
+      <Script id="google-analytics">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YT3V2M6W5C');
+        `}
+      </Script>
       <body className={opensans.className}>{children}</body>
     </html>
   );
