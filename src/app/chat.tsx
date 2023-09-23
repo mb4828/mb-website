@@ -36,14 +36,21 @@ export default function Chat() {
 
   // open and close the chat window
   function openChat(event: React.MouseEvent<HTMLElement>) {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
+    if (!anchorEl) {
+      // open chat
+      setAnchorEl(event.currentTarget);
+    } else {
+      // close chat
+      document.getElementById('chat_el')?.classList.remove(styles.open_chat);
+      document.getElementById('chat_el')?.classList.add(styles.close_chat);
+      setTimeout(() => setAnchorEl(null), 500);
+    }
   }
 
   // handles submit button press
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setFormData({ ...formData, status: 'loading' });
-    console.log(formData);
 
     const body = JSON.stringify({ name: formData.name, email: formData.email, message: formData.message });
     const response = await axios.post('https://f22uyn4vtfmymrei6jdxtm6f7u0xomsz.lambda-url.us-east-1.on.aws/', body);
@@ -63,7 +70,7 @@ export default function Chat() {
       </div>
 
       <Popper open={isOpen} anchorEl={anchorEl} placement="top-end">
-        <Card variant="outlined" className={styles.chat_window}>
+        <Card id="chat_el" variant="outlined" className={`${styles.chat_window} ${styles.open_chat}`}>
           <CardOverflow variant="solid" className={styles.chat_header}>
             <h3>Contact Me</h3>
           </CardOverflow>

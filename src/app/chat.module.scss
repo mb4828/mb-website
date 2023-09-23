@@ -30,6 +30,7 @@
   flex-direction: column;
   font-size: 80%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
 
   .chat_header {
     background: var(--primary-color);
@@ -45,4 +46,34 @@
     display: flex;
     justify-content: space-between;
   }
+}
+
+@keyframes open_chat {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 400px;
+  }
+}
+
+@keyframes close_chat {
+  from {
+    opacity: 1;
+    height: 400px;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.open_chat {
+  animation: open_chat 0.5s forwards;
+}
+
+.close_chat {
+  animation: close_chat 0.5s forwards;
 }
