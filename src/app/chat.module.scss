@@ -71,9 +71,9 @@
 }
 
 .open_chat {
-  animation: open_chat 0.5s forwards;
+  animation: open_chat 0.5s forwards ease-out;
 }
 
 .close_chat {
-  animation: close_chat 0.5s forwards;
+  animation: close_chat 0.5s forwards ease-in;
 }
