@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description:
     'Senior technologist with professional experience in full-stack web development, financial technology, and data analysis',
   icons: { icon: 'monogram_navybk.png' },
+  openGraph: {
+    siteName: 'Matt Brauner',
+  },
   themeColor: '#17233d',
 };
 
