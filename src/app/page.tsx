@@ -13,7 +13,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import bk from '../../public/matt_bk.jpg';
+import bk from '../../public/nyc_background.png';
 import { faAward } from '@fortawesome/free-solid-svg-icons';
 import Chat from './chat';
 
@@ -36,15 +36,26 @@ export default function Home() {
     }
   }
 
+  // parallax effect
+  function parallax() {
+    const el = document.getElementById('header_wrapper');
+    const windowYOffset = window.pageYOffset;
+    if (el) {
+      el.style.backgroundPosition = '50% ' + windowYOffset * 0.6 + 'px';
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', reveal);
+    window.addEventListener('scroll', parallax);
     reveal();
+    parallax();
   }, []);
 
   return (
     <>
-      <header className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
-        <div className={styles.header}>
+      <header id="header_wrapper" className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
+        <div id="header" className={styles.header}>
           <Image src="monogram_white.png" width={40} height={40} alt="" priority={true} />
           <h1 className={source_serif.className}>Matt Brauner</h1>
           <hr />
@@ -54,6 +65,15 @@ export default function Home() {
             New York, NY
           </h2>
         </div>
+        <Image
+          src="matt_cutout.png"
+          id="matt_cutout"
+          className={styles.matt_cutout}
+          width={100}
+          height={100}
+          alt=""
+          priority={true}
+        />
       </header>
 
       <main className={styles.main}>

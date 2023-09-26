@@ -6,6 +6,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  img.matt_cutout {
+    width: auto;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-53%);
+    z-index: 0;
+  }
 }
 
 .header {
@@ -14,10 +24,11 @@
   top: 50%;
   text-align: center;
   animation: fadeInDown 1s;
+  z-index: 1;
 
   h1,
   h2 {
-    color: #fff;
+    color: var(--white);
   }
 
   img {
@@ -29,6 +40,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2em;
+  background: var(--white);
 
   .content_grid {
     display: flex;
