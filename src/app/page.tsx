@@ -11,11 +11,11 @@ import {
   faLinkedin,
   faSquareThreads,
 } from '@fortawesome/free-brands-svg-icons';
+import { faAward } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import bk from '../../public/nyc_background.png';
-import { faAward } from '@fortawesome/free-solid-svg-icons';
 import Chat from './chat';
+import bk from '../../public/nyc_background.png';
 
 const source_serif = Source_Serif_4({ subsets: ['latin'] });
 
@@ -54,9 +54,6 @@ export default function Home() {
 
   return (
     <>
-      {/* make sure background image loads first */}
-      <Image src="nyc_background.png" width={0} height={0} alt="" priority={true} hidden={true} />
-
       <header id="header_wrapper" className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
         <div id="header" className={styles.header}>
           <Image src="monogram_white.png" width={40} height={40} alt="" priority={true} />
@@ -199,6 +196,9 @@ export default function Home() {
       </footer>
 
       <Chat />
+
+      {/* make sure background image loads with priority */}
+      <Image src="nyc_background.png" width={0} height={0} alt="" priority={true} hidden={true} />
     </>
   );
 }

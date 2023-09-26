@@ -2,6 +2,7 @@ import './globals.scss';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Open_Sans } from 'next/font/google';
+import bk from '../../public/nyc_background.png';
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   icons: { icon: 'monogram_navybk.png' },
   openGraph: {
     siteName: 'Matt Brauner',
+    images: [bk.src],
   },
   themeColor: '#17233d',
 };
