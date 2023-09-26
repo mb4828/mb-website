@@ -54,6 +54,9 @@ export default function Home() {
 
   return (
     <>
+      {/* make sure background image loads first */}
+      <Image src="nyc_background.png" width={0} height={0} alt="" priority={true} hidden={true} />
+
       <header id="header_wrapper" className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
         <div id="header" className={styles.header}>
           <Image src="monogram_white.png" width={40} height={40} alt="" priority={true} />
