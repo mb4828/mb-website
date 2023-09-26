@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   icons: { icon: 'monogram_navybk.png' },
   openGraph: {
     siteName: 'Matt Brauner',
-    images: ['matt_bk.png'],
+    images: ['matt_bk.jpg'],
   },
   themeColor: '#17233d',
 };
