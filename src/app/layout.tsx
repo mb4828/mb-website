@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   icons: { icon: 'monogram_navybk.png' },
   openGraph: {
     siteName: 'Matt Brauner',
-    images: ['matt_bk.jpg'],
   },
   themeColor: '#17233d',
 };
@@ -25,15 +24,18 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YT3V2M6W5C" />
-      <Script id="google-analytics">
-        {`
+      <head>
+        <meta property="og:image" content="matt_bk.jpg" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YT3V2M6W5C" />
+        <Script id="google-analytics">
+          {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-YT3V2M6W5C');
         `}
-      </Script>
+        </Script>
+      </head>
       <body className={opensans.className}>{children}</body>
     </html>
   );
