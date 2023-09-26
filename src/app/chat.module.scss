@@ -6,6 +6,7 @@
   right: 24px;
   opacity: 0;
   animation: fadeInUp 0.5s 3s forwards;
+  z-index: 100;
 
   .chat_button {
     width: 48px;
@@ -30,6 +31,7 @@
   flex-direction: column;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   overflow-y: hidden;
+  z-index: 100;
 
   .chat_header {
     background: var(--primary-color);
@@ -41,6 +43,7 @@
   }
 
   .chat_footer {
+    position: relative;
     padding: 0.75em 0;
     display: flex;
     justify-content: space-between;

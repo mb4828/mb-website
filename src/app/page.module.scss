@@ -4,17 +4,16 @@
   position: relative;
   aspect-ratio: 18 / 9;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 
-  img.matt_cutout {
-    width: auto;
-    height: 90%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-53%);
-    z-index: 0;
+  div.matt_cutout {
+    width: 100%;
+    height: 100%;
+    background-size: auto 85%;
+    background-position-x: 49%;
+    background-position-y: 111%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -24,7 +23,6 @@
   top: 50%;
   text-align: center;
   animation: fadeInDown 1s;
-  z-index: 1;
 
   h1,
   h2 {
@@ -75,19 +73,35 @@
 }
 
 .footer {
+  height: 120px;
+  overflow: hidden;
+  position: relative;
   padding: 2em 0;
   text-align: center;
   background: var(--light-gray);
 
   .social_links {
+    position: relative;
     display: flex;
     justify-content: center;
     line-height: 40px;
     gap: 28px;
+    z-index: 1;
   }
 
   p {
+    position: relative;
     font-size: 80%;
+    z-index: 1;
+  }
+
+  .footer_binary {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    color: var(--secondary-color);
+    opacity: 8%;
+    z-index: 0;
   }
 }
 

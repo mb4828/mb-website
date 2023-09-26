@@ -15,7 +15,9 @@ import { faAward } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import Chat from './chat';
-import bk from '../../public/nyc_background.png';
+import city from '../../public/nyc_background.png';
+import matt from '../../public/matt_cutout.png';
+import mosaic from '../../public/mosaic.jpg';
 
 const source_serif = Source_Serif_4({ subsets: ['latin'] });
 
@@ -39,41 +41,39 @@ export default function Home() {
   // parallax effect
   function parallax() {
     const el = document.getElementById('header_wrapper');
+    const el2 = document.getElementById('matt_cutout');
     const windowYOffset = window.pageYOffset;
+    const headerHeight = document.getElementById('header_wrapper')?.offsetHeight ?? 0;
     if (el) {
       el.style.backgroundPosition = '50% ' + windowYOffset * 0.6 + 'px';
+    }
+    if (el2) {
+      el2.style.backgroundPositionY = headerHeight / 6 + windowYOffset * 0.3 + 'px';
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', reveal);
     window.addEventListener('scroll', parallax);
-    reveal();
     parallax();
+    window.addEventListener('scroll', reveal);
+    reveal();
   }, []);
 
   return (
     <>
-      <header id="header_wrapper" className={styles.header_wrapper} style={{ backgroundImage: `url(${bk.src})` }}>
-        <div id="header" className={styles.header}>
-          <Image src="monogram_white.png" width={40} height={40} alt="" priority={true} />
-          <h1 className={source_serif.className}>Matt Brauner</h1>
-          <hr />
-          <h2>
-            Senior Software Engineer
-            <br />
-            New York, NY
-          </h2>
+      <header id="header_wrapper" className={styles.header_wrapper} style={{ backgroundImage: `url(${city.src})` }}>
+        <div id="matt_cutout" className={styles.matt_cutout} style={{ backgroundImage: `url(${matt.src})` }}>
+          <div id="header" className={styles.header}>
+            <Image src="monogram_white.png" width={40} height={40} alt="" priority={true} />
+            <h1 className={source_serif.className}>Matt Brauner</h1>
+            <hr />
+            <h2>
+              Senior Software Engineer
+              <br />
+              New York, NY
+            </h2>
+          </div>
         </div>
-        <Image
-          src="matt_cutout.png"
-          id="matt_cutout"
-          className={styles.matt_cutout}
-          width={100}
-          height={100}
-          alt=""
-          priority={true}
-        />
       </header>
 
       <main className={styles.main}>
@@ -141,10 +141,15 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
+        <p className={styles.footer_binary}>
+          {`01010100 01101000 01100001 01101110 01101011 01110011 00100000 01100110 01101111 01110010 00100000 01110110
+          01101001 01110011 01101001 01110100 01101001 01101110 01100111 00100001`.repeat(50)}
+        </p>
+
         <div className={`${styles.social_links}`}>
           <Link
             className="fb"
-            href="http://facebook.com/matt.brauner/"
+            href="https://facebook.com/matt.brauner/"
             target="_blank"
             rel="noopener"
             aria-label="Facebook"
@@ -154,7 +159,7 @@ export default function Home() {
 
           <Link
             className="ig"
-            href="http://instagram.com/matt.brauner/"
+            href="https://instagram.com/matt.brauner/"
             target="_blank"
             rel="noopener"
             aria-label="Instagram"
@@ -174,7 +179,7 @@ export default function Home() {
 
           <Link
             className="li"
-            href="http://linkedin.com/in/matt-brauner/"
+            href="https://linkedin.com/in/matt-brauner/"
             target="_blank"
             rel="noopener"
             aria-label="LinkedIn"
@@ -182,12 +187,13 @@ export default function Home() {
             <FontAwesomeIcon icon={faLinkedin} size="2xl" />
           </Link>
 
-          <Link href="http://github.com/mb4828" className="gh" target="_blank" rel="noopener" aria-label="GitHub">
+          <Link href="https://github.com/mb4828" className="gh" target="_blank" rel="noopener" aria-label="GitHub">
             <FontAwesomeIcon icon={faGithubSquare} size="2xl" />
           </Link>
         </div>
 
         <p>Copyright &copy; {today.getFullYear()} Matt Brauner</p>
+
         <p>
           <Link href="https://github.com/mb4828/mb-website" target="_blank" rel="noopener">
             View the code for this webapp
@@ -196,9 +202,6 @@ export default function Home() {
       </footer>
 
       <Chat />
-
-      {/* make sure background image loads with priority */}
-      <Image src="nyc_background.png" width={0} height={0} alt="" priority={true} hidden={true} />
     </>
   );
 }
