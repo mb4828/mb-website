@@ -79,6 +79,7 @@
   padding: 2em 0;
   text-align: center;
   background: var(--light-gray);
+  z-index: 0;
 
   .social_links {
     position: relative;
@@ -86,7 +87,6 @@
     justify-content: center;
     line-height: 40px;
     gap: 28px;
-    z-index: 1;
   }
 
   p {
