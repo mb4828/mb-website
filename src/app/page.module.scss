@@ -57,7 +57,7 @@
     .img_wrap {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 1em;
     }
 
     img {
@@ -65,9 +65,15 @@
     }
 
     ul {
+      display: flex;
+      flex-wrap: wrap;
       list-style-type: none;
-      margin: 0;
-      padding: 0;
+      margin: 1.5em 0;
+
+      li {
+        flex-basis: 50%;
+        margin-bottom: 1em;
+      }
     }
   }
 }
@@ -127,6 +133,10 @@
   .main {
     .content_grid > div {
       flex-basis: 100%;
+    }
+
+    li {
+      flex-basis: 100% !important;
     }
   }
 }

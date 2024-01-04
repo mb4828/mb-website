@@ -17,7 +17,6 @@ import Link from 'next/link';
 import Chat from './chat';
 import city from '../../public/nyc_background.png';
 import matt from '../../public/matt_cutout.png';
-import mosaic from '../../public/mosaic.jpg';
 
 const source_serif = Source_Serif_4({ subsets: ['latin'] });
 
@@ -79,25 +78,10 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.content_grid}>
           <div className={`${styles.full_width} ${styles.reveal}`}>
-            <h2>About</h2>
-            <p>
+            <p className="text-center">
               I&apos;m a senior technologist with {yearsExp} years of professional experience in full-stack web
               development, financial technology, and data analysis.
             </p>
-          </div>
-
-          <div className={styles.reveal}>
-            <h2>Education</h2>
-            <div className={styles.img_wrap}>
-              <Image src="colgate.jpg" alt="" width={75} height={75} />
-              <p>
-                <strong>Colgate University</strong>
-                <br />
-                Bachelor of Arts | Computer Science & Economics
-                <br />
-                <span className="text-muted">2011 &ndash; 2015</span>
-              </p>
-            </div>
           </div>
 
           <div className={styles.reveal}>
@@ -115,27 +99,51 @@ export default function Home() {
           </div>
 
           <div className={styles.reveal}>
-            <h2>Skills</h2>
-            <ul>
-              <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#125e8a' }} /> Top 5% of Front End
-                Developers
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#125e8a' }} /> Top 5% of JavaScript
-                Developers
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faAward} style={{ marginRight: 4, color: '#125e8a' }} /> Top 15% of Python
-                Developers
-              </li>
-            </ul>
-            <p className="text-muted">Based on LinkedIn skill assessment</p>
+            <h2>Education</h2>
+            <div className={styles.img_wrap}>
+              <Image src="colgate.jpg" alt="" width={75} height={75} />
+              <p>
+                <strong>Colgate University</strong>
+                <br />
+                Bachelor of Arts | Computer Science & Economics
+                <br />
+                <span className="text-muted">2011 &ndash; 2015</span>
+              </p>
+            </div>
           </div>
 
-          <div className={styles.reveal}>
-            <h2>Interests</h2>
-            <p>Clarinetist with a passion for art, science, technology, and aviation</p>
+          <div className={`${styles.full_width} ${styles.reveal}`}>
+            <h2>Certifications</h2>
+            <ul>
+              <li>
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                &nbsp;
+                <Link href="https://www.hackerrank.com/certificates/1d2bd2382beb" target="_blank" rel="noopener">
+                  Software Engineering | HackerRank
+                </Link>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                &nbsp;
+                <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
+                  Front-End Development | LinkedIn
+                </Link>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                &nbsp;
+                <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
+                  JavaScript | LinkedIn
+                </Link>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                &nbsp;
+                <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
+                  Python | LinkedIn
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </main>
