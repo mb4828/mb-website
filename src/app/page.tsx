@@ -79,8 +79,8 @@ export default function Home() {
         <div className={styles.content_grid}>
           <div className={`${styles.full_width} ${styles.reveal}`}>
             <p className="text-center">
-              I&apos;m a senior technologist with {yearsExp} years of professional experience in full-stack web
-              development, financial technology, and data analysis.
+              Matt is a New York City based technologist with {yearsExp} years of professional experience in full-stack
+              web development, financial technology, and data analysis.
             </p>
           </div>
 
@@ -145,15 +145,26 @@ export default function Home() {
               </li>
             </ul>
           </div>
+
+          <div className={`${styles.full_width} ${styles.reveal}`}>
+            <h2>Interests</h2>
+            <p>
+              In his free time, Matt is an amateur clarinetist and saxophonist with over 20 years of performance
+              experience. He can currently be heard in the&nbsp;
+              <Link href="https://manhattanwindensemble.com" target="_blank" rel="noopener">
+                Manhattan Wind Ensemble
+              </Link>
+              &nbsp;and the&nbsp;
+              <Link href="https://jhorchestra.org" target="_blank" rel="noopener">
+                Jackson Heights Orchestra
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <p className={styles.footer_binary}>
-          {`01010100 01101000 01100001 01101110 01101011 01110011 00100000 01100110 01101111 01110010 00100000 01110110
-          01101001 01110011 01101001 01110100 01101001 01101110 01100111 00100001`.repeat(50)}
-        </p>
-
         <div className={`${styles.social_links}`}>
           <Link
             className="fb"
