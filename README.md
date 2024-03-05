@@ -2,9 +2,9 @@
 
 This is a scratch-built personal website built using [React](https://react.dev) / [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Copyright &copy; 2023 Matt Brauner. All rights reserved. 
-
 The code in this GitHub repository may not be used or reproduced without explicit permission from the owner.
+
+Copyright &copy; 2023 Matt Brauner. All rights reserved. 
 
 ## Getting Started
 

@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 120px;
+  padding: 2em;
+  text-align: center;
+  background: var(--light-gray);
+  z-index: 0;
+
+  .social_links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    gap: 1.5em;
+
+    a {
+      color: var(--primary-color);
+    }
+  }
+
+  p {
+    position: relative;
+    font-size: 80%;
+    z-index: 1;
+  }
+}
