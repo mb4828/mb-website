@@ -72,7 +72,7 @@ export default function MusicPage() {
             </li>
             <li>
               <Link href="/music/danzon.mp3">
-                <i>Danzón</i>, Paquito D'Rivera &ndash; Colgate University Chamber Players
+                <i>Danzón</i>, Paquito D&apos;Rivera &ndash; Colgate University Chamber Players
               </Link>
             </li>
             <li>
