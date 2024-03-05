@@ -91,7 +91,7 @@ a:hover {
 }
 
 .blue_raised_glossy {
-  background-color: #17233df0;
+  background-color: #17233df0 !important;
   backdrop-filter: blur(6px);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   color: var(--white);
