@@ -7,7 +7,7 @@ const header_font = Source_Serif_4({ subsets: ['latin'] });
 
 export default function Header() {
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} blue_raised_glossy`}>
       <div className={styles.header_group}>
         <Link href="/">
           <Image src="/monogram_white.png" width={40} height={40} alt="" priority={true} />

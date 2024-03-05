@@ -1,6 +1,8 @@
 import styles from './page.module.scss';
 import Parallax from '@/components/parallax';
 import Reveal from '@/components/reveal';
+import { faFileAudio } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
 export default function MusicPage() {
@@ -31,13 +33,7 @@ export default function MusicPage() {
                 Manhattan Wind Ensemble | Manhattan, NY
               </Link>
             </li>
-            <li>
-              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra | Queens, NY
-              </Link>
-            </li>
-            <li>OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
-            <li>
+            <li className="order_mobile_last">
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/university-orchestra"
                 target="_blank"
@@ -47,6 +43,11 @@ export default function MusicPage() {
               </Link>
             </li>
             <li>
+              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
+                Jackson Heights Orchestra | Queens, NY
+              </Link>
+            </li>
+            <li className="order_mobile_last">
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/chamber-players"
                 target="_blank"
@@ -55,7 +56,8 @@ export default function MusicPage() {
                 Colgate University Chamber Players | Hamilton, NY
               </Link>
             </li>
-            <li>
+            <li>OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
+            <li className="order_mobile_last">
               <Link href="https://njmea.org/" target="_blank" rel="noopener">
                 New Jersey All-State Symphonic Band
               </Link>
@@ -67,22 +69,32 @@ export default function MusicPage() {
           <h2>Recordings</h2>
           <ul>
             <li>
+              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+              &nbsp;
               <Link href="/music/brahms.mp3">
                 <i>Clarinet Quintet in B minor Op.115</i>, Brahms | Colgate University Chamber Players
               </Link>
             </li>
-            <li>
+            <li className="order_mobile_last">
+              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+              &nbsp;
               <Link href="/music/danzon.mp3">
                 <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
               </Link>
             </li>
             <li>
+              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+              &nbsp;
+              <Link href="/music/bartok.mp3">
+                <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
+              </Link>
+            </li>
+            <li className="order_mobile_last">
+              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+              &nbsp;
               <Link href="/music/gershwin.mp3">
                 <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
               </Link>
-            </li>
-            <li>
-              <Link href="/music/excerpts.mp3">Various excerpts</Link>
             </li>
           </ul>
         </Reveal>

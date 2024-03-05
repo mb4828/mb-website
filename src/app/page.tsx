@@ -65,14 +65,7 @@ export default function WorkPage() {
                   Software Engineering | HackerRank
                 </Link>
               </li>
-              <li>
-                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
-                &nbsp;
-                <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
-                  Front-End Development | LinkedIn
-                </Link>
-              </li>
-              <li>
+              <li className="order_mobile_last">
                 <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
                 &nbsp;
                 <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
@@ -80,6 +73,13 @@ export default function WorkPage() {
                 </Link>
               </li>
               <li>
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                &nbsp;
+                <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
+                  Front-End Development | LinkedIn
+                </Link>
+              </li>
+              <li className="order_mobile_last">
                 <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
                 &nbsp;
                 <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
