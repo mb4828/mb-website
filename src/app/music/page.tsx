@@ -28,22 +28,22 @@ export default function MusicPage() {
           <ul>
             <li>
               <Link href="https://manhattanwindensemble.com/" target="_blank" rel="noopener">
-                Manhattan Wind Ensemble &ndash; Manhattan, NY
+                Manhattan Wind Ensemble | Manhattan, NY
               </Link>
             </li>
             <li>
               <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra &ndash; Queens, NY
+                Jackson Heights Orchestra | Queens, NY
               </Link>
             </li>
-            <li>OnStage, Inc. Pit Orchestra &ndash; Ramsey, NJ</li>
+            <li>OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
             <li>
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/university-orchestra"
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Orchestra &ndash; Hamilton, NY
+                Colgate University Orchestra | Hamilton, NY
               </Link>
             </li>
             <li>
@@ -52,7 +52,7 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Chamber Players &ndash; Hamilton, NY
+                Colgate University Chamber Players | Hamilton, NY
               </Link>
             </li>
             <li>
@@ -68,17 +68,17 @@ export default function MusicPage() {
           <ul>
             <li>
               <Link href="/music/brahms.mp3">
-                <i>Clarinet Quintet in B minor Op.115</i>, Brahms &ndash; Colgate University Chamber Players
+                <i>Clarinet Quintet in B minor Op.115</i>, Brahms | Colgate University Chamber Players
               </Link>
             </li>
             <li>
               <Link href="/music/danzon.mp3">
-                <i>Danzón</i>, Paquito D&apos;Rivera &ndash; Colgate University Chamber Players
+                <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
               </Link>
             </li>
             <li>
               <Link href="/music/gershwin.mp3">
-                <i>Rhapsody in Blue</i>, Gershwin &ndash; Colgate University Orchestra
+                <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
               </Link>
             </li>
             <li>
