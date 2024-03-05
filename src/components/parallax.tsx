@@ -11,10 +11,10 @@ export default function Parallax({ background = '', foreground = '' }: { backgro
     const windowYOffset = window.pageYOffset;
     const wrapperHeight = document.getElementById(styles.wrapper)?.offsetHeight ?? 0;
     if (el) {
-      el.style.backgroundPosition = '50% ' + windowYOffset * 0.6 + 'px';
+      el.style.backgroundPosition = '50% ' + (windowYOffset * 0.6 + 1) + 'px';
     }
     if (el2) {
-      el2.style.backgroundPositionY = wrapperHeight / 6 + windowYOffset * 0.3 + 'px';
+      el2.style.backgroundPositionY = wrapperHeight / 5 + windowYOffset * 0.3 + 'px';
     }
   }
 

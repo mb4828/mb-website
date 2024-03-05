@@ -13,14 +13,14 @@
 #foreground {
   width: 100%;
   height: 100%;
-  background-size: auto 85%;
+  background-size: auto 80%;
   background-position-x: 49%;
-  background-position-y: 111%;
+  background-position-y: 100%;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 1000px) {
   #background {
-    aspect-ratio: 11 / 9;
+    aspect-ratio: 9 / 9;
   }
 }
