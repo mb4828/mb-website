@@ -1,7 +1,10 @@
 import './globals.scss';
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { Open_Sans } from 'next/font/google';
+import Script from 'next/script';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import Chat from '@/components/chat';
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -11,9 +14,8 @@ config.autoAddCss = false;
 const opensans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Matt Brauner | Senior Software Engineer, New York, NY',
-  description:
-    'Senior technologist with professional experience in full-stack web development, financial technology, and data analysis',
+  title: 'Matt Brauner',
+  description: 'New York City based technologist and musician',
   icons: { icon: 'monogram_navybk.png' },
   openGraph: {
     siteName: 'Matt Brauner',
@@ -36,7 +38,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}
         </Script>
       </head>
-      <body className={opensans.className}>{children}</body>
+      <body className={opensans.className}>
+        <Header />
+        {children}
+        <Footer />
+        <Chat />
+      </body>
     </html>
   );
 }
