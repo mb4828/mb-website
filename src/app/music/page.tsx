@@ -36,6 +36,7 @@ export default function MusicPage() {
                 Jackson Heights Orchestra &ndash; Queens, NY
               </Link>
             </li>
+            <li>OnStage, Inc. Pit Orchestra &ndash; Ramsey, NJ</li>
             <li>
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/university-orchestra"
