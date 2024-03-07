@@ -12,6 +12,9 @@
   align-items: middle;
   justify-content: space-between;
   line-height: 40px;
+
+  animation: slideInDown 0.75s 0.5s forwards;
+  transform: translate3d(0, -100%, 0);
 }
 
 .header_group {
@@ -24,5 +27,15 @@
   }
   a:hover {
     text-decoration: none;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    // transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
