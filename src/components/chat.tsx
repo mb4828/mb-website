@@ -68,7 +68,7 @@ export default function Chat() {
           size="lg"
           onClick={openChat}
           className={`${styles.chat_button} blue_raised_glossy`}
-          aria-label="Contact Me"
+          aria-label="Contact Matt"
         >
           <FontAwesomeIcon icon={isOpen ? faXmark : faEnvelope} size="xl" flip="horizontal" fixedWidth />
         </Button>
@@ -77,7 +77,7 @@ export default function Chat() {
       <Popper open={isOpen} anchorEl={anchorEl} placement="top-end">
         <Card id="chat_el" variant="outlined" className={`${styles.chat_window} ${styles.open_chat}`}>
           <CardOverflow variant="solid" className={styles.chat_header}>
-            <h3>Contact Me</h3>
+            <h3>Contact Matt</h3>
           </CardOverflow>
 
           <CardContent>
