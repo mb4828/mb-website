@@ -13,14 +13,13 @@ export default function MusicPage() {
       <main className={styles.main}>
         <Reveal revealOnLoad>
           <p className="text-center">
-            In his free time, Matt is an amateur clarinetist and saxophonist with over 20 years of performance
-            experience. He began studying clarinet at age 9 under the tutelage of Scott Singer. Matt picked up saxophone
-            in high school in order to play in the pit orchestra for the school musicals. Following in the footsteps of
-            his grandfather,{' '}
+            Matt is an amateur clarinetist and saxophonist with over 20 years of performance experience. He began
+            studying clarinet at age 9 under the guidance of Scott Singer. Inspired by his grandfather,&nbsp;
             <Link href="https://en.wikipedia.org/wiki/Buzz_Brauner" target="_blank" rel="noopener">
               Buzz Brauner
             </Link>
-            , a New York City studio musician and woodwind doubler, he is proficient on clarinet and bass clarinet as
+            , a New York City studio musican and woodwind doubler, Matt added saxophone to his repertoire in high school
+            in order to play in the pit orchestra for school musicals. He is proficient on clarinet and bass clarinet as
             well as soprano, alto, and tenor saxophone.
           </p>
         </Reveal>
