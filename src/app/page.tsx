@@ -18,7 +18,7 @@ export default function WorkPage() {
 
       <main className={styles.main}>
         <div className={styles.content_grid}>
-          <Reveal className={styles.full_width}>
+          <Reveal className={styles.full_width} revealOnLoad>
             <p className="text-center">
               Matt is a New York City based technologist with {yearsExp} years of professional experience in full-stack
               web development, financial technology, and data analysis.

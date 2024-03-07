@@ -11,7 +11,7 @@ export default function MusicPage() {
       <Parallax background="/orchestra.jpeg"></Parallax>
 
       <main className={styles.main}>
-        <Reveal>
+        <Reveal revealOnLoad>
           <p className="text-center">
             In his free time, Matt is an amateur clarinetist and saxophonist with over 20 years of performance
             experience. He began studying clarinet at age 9 under the tutelage of Scott Singer. Matt picked up saxophone
