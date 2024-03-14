@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function MusicPage() {
   return (
     <>
-      <Parallax background="/orchestra.jpeg"></Parallax>
+      <Parallax background="/background.jpg" foreground="/matt_clarinet.jpeg" yOffset={7}></Parallax>
 
       <main className={styles.main}>
         <Reveal revealOnLoad>
