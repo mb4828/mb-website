@@ -7,10 +7,14 @@ export default function Parallax({
   background = '',
   foreground = '',
   yOffset = 5,
+  aspectRatio = '19 / 9',
+  size = '80%',
 }: {
   background?: string;
   foreground?: string;
   yOffset?: number;
+  aspectRatio?: string;
+  size?: string;
 }) {
   useEffect(() => {
     // parallax effect
@@ -33,8 +37,11 @@ export default function Parallax({
 
   return (
     <div id={styles.wrapper}>
-      <div id={styles.background} style={{ backgroundImage: `url(${background})` }}>
-        <div id={styles.foreground} style={{ backgroundImage: `url(${foreground})` }}></div>
+      <div id={styles.background} style={{ backgroundImage: `url(${background})`, aspectRatio: aspectRatio }}>
+        <div
+          id={styles.foreground}
+          style={{ backgroundImage: `url(${foreground})`, backgroundSize: `auto ${size}` }}
+        ></div>
       </div>
     </div>
   );
