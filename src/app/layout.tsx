@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: 'Matt Brauner',
   },
+};
+
+export const viewport = {
   themeColor: '#17233d',
 };
 
