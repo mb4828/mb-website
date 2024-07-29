@@ -19,9 +19,17 @@ export default function MusicPage() {
               Buzz Brauner
             </Link>
             , a New York City studio musican and woodwind doubler, Matt added saxophone to his repertoire in high school
-            in order to play in the pit orchestra for school musicals. He is proficient on clarinet and bass clarinet as
-            well as soprano, alto, and tenor saxophone.
+            in order to play in the pit orchestra for school musicals. He performs regularly with orchestras and
+            symphonic bands throughout New York City.
           </p>
+        </Reveal>
+
+        <Reveal>
+          <h2>Instruments</h2>
+          <ul>
+            <li>Clarinets &mdash; B♭, E♭, A, Bass</li>
+            <li>Saxophones &mdash; Soprano, Alto, Tenor</li>
+          </ul>
         </Reveal>
 
         <Reveal>
