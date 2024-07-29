@@ -5,15 +5,13 @@
   bottom: 24px;
   right: 24px;
   opacity: 0;
-  animation: fadeInUp 0.5s 3s forwards;
+  animation: fadeInUp 0.5s 1.25s forwards;
   z-index: 100;
 
   .chat_button {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--primary-color);
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
   }
 
