@@ -14,6 +14,7 @@ config.autoAddCss = false;
 const opensans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.mattbrauner.com'),
   title: 'Matt Brauner',
   description: 'New York City based technologist and musician',
   icons: { icon: 'monogram_navybk.png' },
