@@ -15,11 +15,32 @@ const opensans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mattbrauner.com'),
-  title: 'Matt Brauner',
-  description: 'New York City based technologist and musician',
   icons: { icon: 'monogram_navybk.png' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: 'index, follow',
+  },
+
+  title: 'Matt Brauner | Work',
+  description:
+    'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis',
+  keywords: [
+    'matt brauner',
+    'new york',
+    'nyc',
+    'software engineer',
+    'web development',
+    'financial technology',
+    'data analysis',
+  ],
   openGraph: {
     siteName: 'Matt Brauner',
+    title: 'Matt Brauner | Work',
+    description:
+      'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis',
+    type: 'website',
+    locale: 'en_US',
   },
 };
 
