@@ -1,14 +1,21 @@
+import { SITE_NAME } from '@/components/constants';
 import { Metadata } from 'next';
 
+const PAGE_NAME = 'Music | Matt Brauner';
+const PAGE_DESC = 'Matt Brauner is an amateur clarinetist and saxophonist with over 20 years of performance experience';
+
 export const metadata: Metadata = {
-  title: 'Matt Brauner | Music',
-  description: 'Matt Brauner is an amateur clarinetist and saxophonist with over 20 years of performance experience',
+  title: PAGE_NAME,
+  description: PAGE_DESC,
   keywords: ['matt brauner', 'new york', 'nyc', 'musician', 'clarinet', 'saxophone'],
   openGraph: {
-    url: 'https://mattbrauner.com',
+    siteName: SITE_NAME,
+    locale: 'en_US',
     type: 'website',
-    title: 'Matt Brauner | Music',
-    description: 'Matt Brauner is an amateur clarinetist and saxophonist with over 20 years of performance experience',
+    url: 'https://mattbrauner.com/music',
+    title: PAGE_NAME,
+    description: PAGE_DESC,
+    images: [{ url: 'matt_clarinet.jpeg', width: 2743, height: 3658 }],
   },
 };
 

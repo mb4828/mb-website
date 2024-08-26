@@ -5,6 +5,8 @@ import Script from 'next/script';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Chat from '@/components/chat';
+import { WebSite, WithContext } from 'schema-dts';
+import { SITE_NAME } from '@/components/constants';
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -12,6 +14,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
 const opensans = Open_Sans({ subsets: ['latin'] });
+
+const PAGE_NAME = 'Work | Matt Brauner';
+const PAGE_DESC =
+  'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mattbrauner.com'),
@@ -22,9 +28,8 @@ export const metadata: Metadata = {
     googleBot: 'index, follow',
   },
 
-  title: 'Matt Brauner | Work',
-  description:
-    'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis',
+  title: PAGE_NAME,
+  description: PAGE_DESC,
   keywords: [
     'matt brauner',
     'new york',
@@ -35,13 +40,23 @@ export const metadata: Metadata = {
     'data analysis',
   ],
   openGraph: {
-    siteName: 'Matt Brauner',
-    title: 'Matt Brauner | Work',
-    description:
-      'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis',
-    type: 'website',
+    siteName: SITE_NAME,
     locale: 'en_US',
+    type: 'website',
+    url: 'https://www.mattbrauner.com',
+    title: PAGE_NAME,
+    description: PAGE_DESC,
+    images: [{ url: 'matt_bk.jpg', width: 2000, height: 1339 }],
   },
+};
+
+const jsonLd: WithContext<WebSite> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  alternateName: 'Matt Brauner',
+  url: 'https://www.mattbrauner.com',
+  image: 'matt_bk.jpg',
 };
 
 export const viewport = {
@@ -52,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <meta property="og:image" content="matt_bk.jpg" />
+        <Script id="ld+json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YT3V2M6W5C" />
         <Script id="google-analytics">
           {`
