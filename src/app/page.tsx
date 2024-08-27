@@ -14,7 +14,7 @@ export default function WorkPage() {
 
   return (
     <>
-      <Parallax background="/nyc_background.png" foreground="/matt_cutout.png"></Parallax>
+      <Parallax background="/matt_headshot_background.png" foreground="/matt_headshot_cutout.png"></Parallax>
 
       <main className={styles.main}>
         <div className={styles.content_grid}>

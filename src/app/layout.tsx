@@ -6,7 +6,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Chat from '@/components/chat';
 import { WebSite, WithContext } from 'schema-dts';
-import { SITE_NAME } from '@/components/constants';
+import { SITE_NAME, SITE_TITLE } from '@/components/constants';
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -15,7 +15,7 @@ config.autoAddCss = false;
 
 const opensans = Open_Sans({ subsets: ['latin'] });
 
-const PAGE_NAME = `${SITE_NAME} - Work`;
+const PAGE_TITLE = SITE_TITLE;
 const PAGE_DESC =
   'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis';
 
@@ -27,8 +27,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: 'index, follow',
   },
-
-  title: PAGE_NAME,
+  title: PAGE_TITLE,
   description: PAGE_DESC,
   keywords: [
     'matt brauner',
@@ -44,9 +43,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     url: 'https://www.mattbrauner.com',
-    title: PAGE_NAME,
+    title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: [{ url: 'matt_bk.jpg', width: 2000, height: 1339 }],
+    images: [{ url: 'matt_og.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -54,9 +53,8 @@ const jsonLd: WithContext<WebSite> = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: SITE_NAME,
-  alternateName: 'Matt Brauner',
   url: 'https://www.mattbrauner.com',
-  image: 'matt_bk.jpg',
+  image: 'matt_og.jpg',
 };
 
 export const viewport = {
