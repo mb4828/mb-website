@@ -15,7 +15,7 @@ config.autoAddCss = false;
 
 const opensans = Open_Sans({ subsets: ['latin'] });
 
-const PAGE_NAME = 'Matt Brauner | Work';
+const PAGE_NAME = `${SITE_NAME} - Work`;
 const PAGE_DESC =
   'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis';
 

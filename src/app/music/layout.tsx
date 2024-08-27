@@ -1,7 +1,7 @@
 import { SITE_NAME } from '@/components/constants';
 import { Metadata } from 'next';
 
-const PAGE_NAME = 'Matt Brauner | Music';
+const PAGE_NAME = `${SITE_NAME} - Music`;
 const PAGE_DESC = 'Matt Brauner is an amateur clarinetist and saxophonist with over 20 years of performance experience';
 
 export const metadata: Metadata = {

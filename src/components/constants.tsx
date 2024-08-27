@@ -1,1 +1,1 @@
-export const SITE_NAME = 'Matt Brauner - Technologist & Musician';
+export const SITE_NAME = 'Matt Brauner | Software Engineer & Musician';
