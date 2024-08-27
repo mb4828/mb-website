@@ -58,6 +58,16 @@ export default function WorkPage() {
           </div>
 
           <Reveal className={styles.full_width}>
+            <h2>Skills</h2>
+            <ul>
+              <li>Programming &mdash; Javascript / Typescript, Python, Java</li>
+              <li>Data Analysis &mdash; Jupyter, Power BI, Pandas, Spark, SQL</li>
+              <li>Frameworks &mdash; Angular, React, jQuery, Django, Node.js</li>
+              <li>Miscellaneous &mdash; Unix, Git, Nx</li>
+            </ul>
+          </Reveal>
+
+          <Reveal className={styles.full_width}>
             <h2>Certifications</h2>
             <ul>
               <li>
