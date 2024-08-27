@@ -63,7 +63,7 @@ export default function WorkPage() {
               <li>Programming &mdash; Javascript / Typescript, Python, Java</li>
               <li>Data Analysis &mdash; Jupyter, Power BI, Pandas, Spark, SQL</li>
               <li>Frameworks &mdash; Angular, React, jQuery, Django, Node.js</li>
-              <li>Miscellaneous &mdash; Unix, Git, Nx</li>
+              <li>and more&hellip;</li>
             </ul>
           </Reveal>
 

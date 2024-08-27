@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: 'https://www.mattbrauner.com',
     title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: [{ url: 'matt_og.jpg', width: 1200, height: 630 }],
+    images: [{ url: 'matt_og.jpeg', width: 1200, height: 630 }],
   },
 };
 
@@ -54,7 +54,7 @@ const jsonLd: WithContext<WebSite> = {
   '@type': 'WebSite',
   name: SITE_NAME,
   url: 'https://www.mattbrauner.com',
-  image: 'matt_og.jpg',
+  image: 'matt_og.jpeg',
 };
 
 export const viewport = {
