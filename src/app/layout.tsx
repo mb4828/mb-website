@@ -5,8 +5,8 @@ import Script from 'next/script';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Chat from '@/components/chat';
-import { WebSite, WithContext } from 'schema-dts';
-import { SITE_NAME, SITE_TITLE } from '@/components/constants';
+import { Graph, Person, WebSite, WithContext } from 'schema-dts';
+import { SITE_NAME } from '@/components/constants';
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -15,7 +15,7 @@ config.autoAddCss = false;
 
 const opensans = Open_Sans({ subsets: ['latin'] });
 
-const PAGE_TITLE = SITE_TITLE;
+const PAGE_TITLE = `${SITE_NAME} - Senior Software Engineer`;
 const PAGE_DESC =
   'Matt Brauner is a New York City based technologist with professional experience in full-stack web development, financial technology, and data analysis';
 
@@ -39,26 +39,74 @@ export const metadata: Metadata = {
     'data analysis',
   ],
   openGraph: {
-    siteName: SITE_NAME,
-    locale: 'en_US',
-    type: 'website',
-    url: 'https://www.mattbrauner.com',
     title: PAGE_TITLE,
-    description: PAGE_DESC,
+    type: 'profile',
     images: [{ url: 'matt_og.jpeg', width: 1200, height: 630 }],
+    url: 'https://www.mattbrauner.com',
+    description: PAGE_DESC,
+    locale: 'en_US',
+    siteName: SITE_NAME,
+    firstName: 'Matt',
+    lastName: 'Brauner',
   },
-};
-
-const jsonLd: WithContext<WebSite> = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: SITE_NAME,
-  url: 'https://www.mattbrauner.com',
-  image: 'matt_og.jpeg',
 };
 
 export const viewport = {
   themeColor: '#17233d',
+};
+
+const jsonLdPerson: WithContext<Person> = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Matt Brauner',
+  jobTitle: 'Senior Software Engineer',
+  url: 'https://www.mattbrauner.com',
+  image: 'https://www.mattbrauner.com/matt_headshot_original.jpg',
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: 'BlackRock',
+      sameAs: 'https://blackrock.com',
+    },
+  ],
+  alumniOf: [
+    {
+      '@type': 'HighSchool',
+      name: 'Mahwah High School',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Colgate University',
+      sameAs: 'https://colgate.edu',
+    },
+  ],
+  gender: 'Male',
+  description: PAGE_DESC,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'New York',
+    addressCountry: 'United States',
+  },
+  sameAs: [
+    'https://www.facebook.com/matt.brauner/',
+    'https://www.instagram.com/matt.brauner/',
+    'https://www.threads.net/@matt.brauner',
+    'https://www.linkedin.com/in/matt-brauner/',
+    'https://github.com/mb4828',
+  ],
+};
+
+const jsonLdWebSite: WithContext<WebSite> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: 'https://www.mattbrauner.com',
+  image: 'https://www.mattbrauner.com/matt_og.jpeg',
+};
+
+const jsonLd: Graph = {
+  '@context': 'https://schema.org',
+  '@graph': [jsonLdPerson, jsonLdWebSite],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
