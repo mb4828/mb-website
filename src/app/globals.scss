@@ -5,7 +5,6 @@
   --dark-gray: rgba(0, 0, 0, 0.6);
   --white: #fff;
   --font-color: rgba(0, 0, 0, 0.9);
-  --input-color: var(--white);
   --body-background-color: var(--white);
   --header-background-color: #17233df0;
   --header-font-color: var(--white);
@@ -14,19 +13,20 @@
 }
 
 // dark mode
-// :root {
-//   --primary-color: #17233d;
-//   --secondary-color: #51b1e8;
-//   --dark-gray: rgba(0, 0, 0, 0.6);
-//   --white: #fff;
-//   --font-color: #e3e3e3;
-//   --input-color: #2f2f2f;
-//   --body-background-color: #1f1f1f;
-//   --header-background-color: var(--primary-color);
-//   --header-font-color: var(--font-color);
-//   --footer-background-color: var(--primary-color);
-//   --footer-icon-color: var(--secondary-color);
-// }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #17233d;
+    --secondary-color: #1b8dd0;
+    --dark-gray: rgba(0, 0, 0, 0.6);
+    --white: #fff;
+    --font-color: #e3e3e3;
+    --body-background-color: #1f1f1f;
+    --header-background-color: var(--primary-color);
+    --header-font-color: var(--font-color);
+    --footer-background-color: #181818;
+    --footer-icon-color: var(--secondary-color);
+  }
+}
 
 html,
 body {
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .svg-inline--fa {
-  color: var(--secondary-color); // font awesome icon color
+  color: var(--secondary-color); // font awesome icon default color
 }
 
 @media (max-width: 1000px) {

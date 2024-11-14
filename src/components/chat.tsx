@@ -17,6 +17,7 @@ import {
   Input,
   Textarea,
 } from '@mui/joy';
+import { CssVarsProvider } from '@mui/joy/styles';
 import { FormEvent, useState } from 'react';
 
 export default function Chat() {
@@ -62,7 +63,7 @@ export default function Chat() {
   }
 
   return (
-    <>
+    <CssVarsProvider defaultMode="system">
       <div className={styles.chat_button_wrapper}>
         <Button
           size="lg"
@@ -136,6 +137,6 @@ export default function Chat() {
           </CardContent>
         </Card>
       </Popper>
-    </>
+    </CssVarsProvider>
   );
 }
