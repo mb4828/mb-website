@@ -5,7 +5,7 @@
   height: 120px;
   padding: 2em;
   text-align: center;
-  background: var(--light-gray);
+  background: var(--footer-background-color);
   z-index: 0;
 
   .social_links {
@@ -15,8 +15,8 @@
     line-height: 40px;
     gap: 1.5em;
 
-    a {
-      color: var(--primary-color);
+    svg {
+      color: var(--footer-icon-color);
     }
   }
 

@@ -71,28 +71,28 @@ export default function WorkPage() {
             <h2>Certifications</h2>
             <ul>
               <li>
-                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
                 &nbsp;
                 <Link href="https://www.hackerrank.com/certificates/1d2bd2382beb" target="_blank" rel="noopener">
                   Software Engineering | HackerRank
                 </Link>
               </li>
               <li className="order_mobile_last">
-                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
                 &nbsp;
                 <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
                   JavaScript | LinkedIn
                 </Link>
               </li>
               <li>
-                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
                 &nbsp;
                 <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
                   Front-End Development | LinkedIn
                 </Link>
               </li>
               <li className="order_mobile_last">
-                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4, color: '#125e8a' }} />
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
                 &nbsp;
                 <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
                   Python | LinkedIn

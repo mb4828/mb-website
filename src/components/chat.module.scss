@@ -13,6 +13,9 @@
     height: 48px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    svg {
+      color: var(--header-font-color);
+    }
   }
 
   .chat_button:hover {
@@ -30,6 +33,7 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   overflow-y: hidden;
   z-index: 100;
+  background-color: var(--body-background-color);
 
   .chat_header {
     background: var(--primary-color);
@@ -38,6 +42,9 @@
 
   .form_group {
     padding: 0.75em 0;
+    input {
+      background-color: var(--input-color);
+    }
   }
 
   .chat_footer {
@@ -45,6 +52,9 @@
     padding: 0.75em 0;
     display: flex;
     justify-content: space-between;
+    svg {
+      color: var(--header-font-color);
+    }
   }
 }
 
