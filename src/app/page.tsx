@@ -7,10 +7,37 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/reveal';
 import Parallax from '@/components/parallax';
+import { useEffect, useState } from 'react';
 
 export default function WorkPage() {
+  const BLK_LIGHT_SRC = '/blackrock.jpeg';
+  const BLK_DARK_SRC = '/blackrock-dark.jpeg';
   const today = new Date();
   const yearsExp = today.getFullYear() - 2015;
+  const [blkImageSrc, setBlkImageSrc] = useState(BLK_LIGHT_SRC);
+
+  useEffect(() => {
+    // Function to update the image based on dark mode preference
+    const updateImageSrc = (e: any) => {
+      if (e.matches) {
+        setBlkImageSrc(BLK_DARK_SRC);
+      } else {
+        setBlkImageSrc(BLK_LIGHT_SRC);
+      }
+    };
+
+    // Check if the user has dark mode enabled
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', updateImageSrc);
+
+    // Initial check on load
+    if (mediaQuery.matches) {
+      setBlkImageSrc(BLK_DARK_SRC);
+    }
+
+    // Cleanup event listener on component unmount
+    return () => mediaQuery.removeEventListener('change', updateImageSrc);
+  }, []);
 
   return (
     <>
@@ -31,7 +58,7 @@ export default function WorkPage() {
             <Reveal className={styles.half_width}>
               <h2>Work</h2>
               <div className={styles.img_wrap}>
-                <Image src="/blackrock.jpeg" alt="" width={75} height={75} />
+                <Image src={blkImageSrc} alt="" width={75} height={75} />
                 <p>
                   <strong>BlackRock</strong>
                   <br />
