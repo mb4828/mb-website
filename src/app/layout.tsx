@@ -51,9 +51,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport = {
-  themeColor: '#17233d',
-};
+export const viewport = {};
 
 const jsonLdPerson: WithContext<Person> = {
   '@context': 'https://schema.org',
