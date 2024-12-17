@@ -2,12 +2,17 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Test build Next.js site without deploying
+name: Next.js test build
 
 on:
-  # Runs on pushes targeting the develop and feature branches
+  # Runs on pushes and PRs
   push:
-    branches: ["develop", "feature/*"]
+    branches:
+      - "develop"
+      - "feature/*"
+  pull_request:
+    branches:
+      - "main"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
