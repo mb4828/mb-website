@@ -8,10 +8,10 @@ on:
   # Runs on all PRs
   push:
     branches:
-      - "depandabot/*"
+      - "dependabot/*"
   pull_request:
     branches:
-      - "depandabot/*"
+      - "dependabot/*"
       - "main"
 
   # Allows you to run this workflow manually from the Actions tab
