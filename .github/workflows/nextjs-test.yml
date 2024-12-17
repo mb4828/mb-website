@@ -5,12 +5,8 @@
 name: Next.js test build
 
 on:
-  # Runs on pushes and PRs
-  push:
-    branches:
-      - "develop"
-      - "feature/*"
-  pull_request:
+  # Runs on all PRs
+  pull_request_target:
     branches:
       - "main"
 
