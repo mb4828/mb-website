@@ -6,7 +6,7 @@ name: Next.js test build
 
 on:
   # Runs on all PRs
-  pull_request_target:
+  pull_request:
     branches:
       - "main"
 
