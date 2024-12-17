@@ -40,12 +40,6 @@ export default function MusicPage() {
                 Manhattan Wind Ensemble | Manhattan, NY
               </Link>
             </li>
-            <li className="order_mobile_last">OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
-            <li>
-              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra | Queens, NY
-              </Link>
-            </li>
             <li className="order_mobile_last">
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/university-orchestra"
@@ -56,12 +50,8 @@ export default function MusicPage() {
               </Link>
             </li>
             <li>
-              <Link
-                href="https://www.vagelos.columbia.edu/education/student-resources/office-student-affairs/vp-s-club/clubs-and-organizations/arts-literature-and-entertainment-clubs/cuimc-symphony-orchestra"
-                target="_blank"
-                rel="noopener"
-              >
-                Columbia University Medical Center Orchestra | Manhattan, NY
+              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
+                Jackson Heights Orchestra | Queens, NY
               </Link>
             </li>
             <li className="order_mobile_last">
@@ -73,6 +63,16 @@ export default function MusicPage() {
                 Colgate University Chamber Players | Hamilton, NY
               </Link>
             </li>
+            <li>
+              <Link
+                href="https://www.vagelos.columbia.edu/education/student-resources/office-student-affairs/vp-s-club/clubs-and-organizations/arts-literature-and-entertainment-clubs/cuimc-symphony-orchestra"
+                target="_blank"
+                rel="noopener"
+              >
+                Columbia University Medical Center Orchestra | Manhattan, NY
+              </Link>
+            </li>
+            <li className="order_mobile_last">OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
           </ul>
         </Reveal>
 
