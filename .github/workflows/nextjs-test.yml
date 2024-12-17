@@ -6,8 +6,12 @@ name: Next.js test build
 
 on:
   # Runs on all PRs
+  push:
+    branches:
+      - "depandabot/*"
   pull_request:
     branches:
+      - "depandabot/*"
       - "main"
 
   # Allows you to run this workflow manually from the Actions tab
