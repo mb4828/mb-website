@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: PAGE_TITLE,
     type: 'profile',
-    images: [{ url: 'matt_og.jpeg', width: 1200, height: 630 }],
+    images: [{ url: 'matt_og2.jpeg', width: 1200, height: 630 }],
     url: 'https://www.mattbrauner.com',
     description: PAGE_DESC,
     locale: 'en_US',
@@ -99,7 +99,7 @@ const jsonLdWebSite: WithContext<WebSite> = {
   '@type': 'WebSite',
   name: SITE_NAME,
   url: 'https://www.mattbrauner.com',
-  image: 'https://www.mattbrauner.com/matt_og.jpeg',
+  image: 'https://www.mattbrauner.com/matt_og2.jpeg',
 };
 
 const jsonLd: Graph = {

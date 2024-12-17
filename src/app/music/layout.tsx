@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: PAGE_TITLE,
     type: 'profile',
-    images: [{ url: 'matt_og.jpeg', width: 1200, height: 630 }],
+    images: [{ url: 'matt_og2.jpeg', width: 1200, height: 630 }],
     url: 'https://www.mattbrauner.com/music',
     description: PAGE_DESC,
     locale: 'en_US',
