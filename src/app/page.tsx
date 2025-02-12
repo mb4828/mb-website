@@ -47,9 +47,9 @@ export default function WorkPage() {
         <div className={styles.content_grid}>
           <Reveal className={styles.full_width} revealOnLoad>
             <p className="text-center">
-              Matt is a New York City based technologist with {yearsExp} years of professional experience in full-stack
-              web development, financial technology, and data analysis. He has a Bachelor&apos;s Degree in Computer
-              Science and Economics from Colgate University. Matt specializes in Python and Javascript but has
+              Matt is a New York City based technologist with {yearsExp} years of experience in tech leadership,
+              full-stack web development, financial technology, and data analysis. He has a Bachelor&apos;s Degree in
+              Computer Science and Economics from Colgate University. Matt specializes in Python and Javascript but has
               experience with many programming languages and frameworks.
             </p>
           </Reveal>
