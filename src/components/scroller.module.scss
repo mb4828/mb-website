@@ -20,3 +20,9 @@
     transform: translate(calc(-50% - 50px));
   }
 }
+
+@media (max-width: 1000px) {
+  .scroller ul {
+    animation-duration: 45s;
+  }
+}

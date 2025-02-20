@@ -96,18 +96,18 @@ export default function WorkPage() {
                   Software Engineering | HackerRank
                 </Link>
               </li>
+              <li>
+                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
+                &nbsp;
+                <Link href="https://www.hackerrank.com/certificates/b8cd8a8e10b1" target="_blank" rel="noopener">
+                  Frontend Development (React) | HackerRank
+                </Link>
+              </li>
               <li className="order_mobile_last">
                 <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
                 &nbsp;
                 <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
                   JavaScript | LinkedIn
-                </Link>
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
-                &nbsp;
-                <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
-                  Front-End Development | LinkedIn
                 </Link>
               </li>
               <li className="order_mobile_last">
