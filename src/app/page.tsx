@@ -8,6 +8,8 @@ import Link from 'next/link';
 import Reveal from '@/components/reveal';
 import Parallax from '@/components/parallax';
 import { useEffect, useState } from 'react';
+import StackIcon from 'tech-stack-icons';
+import Scroller from '@/components/scroller';
 
 export default function WorkPage() {
   const BLK_LIGHT_SRC = '/blackrock.jpeg';
@@ -85,16 +87,6 @@ export default function WorkPage() {
           </div>
 
           <Reveal className={styles.full_width}>
-            <h2>Skills</h2>
-            <ul>
-              <li>Programming &mdash; Javascript / Typescript, Python, Java</li>
-              <li>Data Analysis &mdash; Jupyter, Power BI, Pandas, Spark, SQL</li>
-              <li>Frameworks &mdash; Angular, React, jQuery, Django, Node.js</li>
-              <li>and more&hellip;</li>
-            </ul>
-          </Reveal>
-
-          <Reveal className={styles.full_width}>
             <h2>Certifications</h2>
             <ul>
               <li>
@@ -126,6 +118,95 @@ export default function WorkPage() {
                 </Link>
               </li>
             </ul>
+          </Reveal>
+
+          <Reveal className={styles.full_width}>
+            <h2>Skills</h2>
+            <Scroller>
+              <ul className={styles.tech_stack}>
+                {/* javascript */}
+                <li>
+                  <StackIcon name="js" />
+                  JavaScript
+                </li>
+                <li>
+                  <StackIcon name="typescript" />
+                  Typescript
+                </li>
+                <li>
+                  <StackIcon name="jquery" />
+                  jQuery
+                </li>
+                <li>
+                  <StackIcon name="html5" />
+                  HTML
+                </li>
+                <li>
+                  <StackIcon name="css3" />
+                  CSS
+                </li>
+                <li>
+                  <StackIcon name="angular17" />
+                  Angular
+                </li>
+                <li>
+                  <StackIcon name="reactjs" />
+                  React
+                </li>
+
+                {/* python */}
+                <li>
+                  <StackIcon name="python" />
+                  Python
+                </li>
+                <li>
+                  <StackIcon name="django" />
+                  Django
+                </li>
+
+                {/* ruby */}
+                <li>
+                  <StackIcon name="ruby" />
+                  Ruby
+                </li>
+                <li>
+                  <StackIcon name="rails" />
+                  Rails
+                </li>
+
+                {/* java */}
+                <li>
+                  <StackIcon name="java" />
+                  Java
+                </li>
+
+                {/* misc */}
+                <li>
+                  <StackIcon name="docker" />
+                  Docker
+                </li>
+                <li>
+                  <StackIcon name="wordpress" />
+                  Wordpress
+                </li>
+                <li>
+                  <StackIcon name="mysql" />
+                  SQL
+                </li>
+                <li>
+                  <StackIcon name="cassandradb" />
+                  Cassandra
+                </li>
+                <li>
+                  <StackIcon name="bash" />
+                  Bash
+                </li>
+                <li>
+                  <StackIcon name="git" />
+                  Git
+                </li>
+              </ul>
+            </Scroller>
           </Reveal>
         </div>
       </main>

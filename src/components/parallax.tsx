@@ -17,17 +17,21 @@ export default function Parallax({
   size?: string;
 }) {
   useEffect(() => {
-    // parallax effect
     function parallax() {
+      // parallax effect
       const el = document.getElementById(styles.background);
       const el2 = document.getElementById(styles.foreground);
       const windowYOffset = window.pageYOffset;
       const wrapperHeight = document.getElementById(styles.wrapper)?.offsetHeight ?? 0;
-      if (el) {
+      if (el && el2) {
         el.style.backgroundPosition = '50% ' + (windowYOffset * 0.6 + 1) + 'px';
-      }
-      if (el2) {
         el2.style.backgroundPositionY = wrapperHeight / yOffset + windowYOffset * 0.3 + 'px';
+
+        // fade out and blur as you scroll
+        const opacity = Math.max(0, Math.min(1, (wrapperHeight - windowYOffset) / (wrapperHeight / 2)));
+        const blur = Math.min(5, Math.max(0, (5 / (wrapperHeight / 2)) * (windowYOffset - wrapperHeight / 2)));
+        el2.style.opacity = opacity.toString();
+        el2.style.filter = `blur(${blur}px)`;
       }
     }
 

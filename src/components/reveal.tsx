@@ -21,7 +21,7 @@ export default function Reveal({
       for (var i = 0; i < reveals.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 75;
+        const elementVisible = 100;
         if (revealOnLoad || elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add(`${styles.reveal_active}`);
         }
