@@ -51,4 +51,10 @@
   .half_width {
     flex-basis: 100% !important;
   }
+  .tech_stack {
+    gap: 50px;
+    svg {
+      width: 40px !important;
+    }
+  }
 }
