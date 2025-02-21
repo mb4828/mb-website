@@ -98,7 +98,7 @@ export default function WorkPage() {
           <div className={styles.flex_row}>
             <Reveal className={`${styles.third_width} ${styles.skills}`}>
               <h2>Skills</h2>
-              <Scroller width={screenWidth > 1000 ? 'calc(1200px / 3 - 3em)' : 'calc(100vw - 3em)'}>
+              <Scroller width={screenWidth > 1000 ? 'calc(1200px / 3 - 3em)' : 'calc(100vw - 4em)'}>
                 <ul>
                   {/* javascript */}
                   <li>
