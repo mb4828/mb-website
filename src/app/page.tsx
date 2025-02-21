@@ -17,7 +17,7 @@ export default function WorkPage() {
   const today = new Date();
   const yearsExp = today.getFullYear() - 2015;
   const [blkImageSrc, setBlkImageSrc] = useState(BLK_LIGHT_SRC);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     // Update the image based on dark mode preference
@@ -37,10 +37,11 @@ export default function WorkPage() {
     };
     window.addEventListener('resize', updateScreenWidth);
 
-    // Initial check on load
+    // On load
     if (mediaQuery.matches) {
       setBlkImageSrc(BLK_DARK_SRC);
     }
+    setScreenWidth(window.innerWidth);
 
     // Cleanup event listener on component unmount
     return () => {
@@ -222,7 +223,7 @@ export default function WorkPage() {
               <h2>Resume</h2>
               <Link href="/Matt Brauner Resume Web.pdf" target="_blank" rel="noopener">
                 <FontAwesomeIcon icon={faFilePdf} size="lg" style={{ marginRight: 4 }} />
-                Download Resume
+                View Resume
               </Link>
             </Reveal>
           </div>
