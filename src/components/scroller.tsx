@@ -3,7 +3,15 @@
 import { useEffect } from 'react';
 import styles from './scroller.module.scss';
 
-export default function Scroller({ children, className }: { children: React.ReactNode; className?: string }) {
+export default function Scroller({
+  children,
+  width,
+  className,
+}: {
+  children: React.ReactNode;
+  width: string;
+  className?: string;
+}) {
   useEffect(() => {
     // get the li elements within the scroller
     const scroller = document.querySelector(`.${styles.scroller}`);
@@ -20,5 +28,9 @@ export default function Scroller({ children, className }: { children: React.Reac
     }
   }, []);
 
-  return <div className={`${styles.scroller} ${className}`}>{children}</div>;
+  return (
+    <div className={`${styles.scroller} ${className}`} style={{ width: width }}>
+      {children}
+    </div>
+  );
 }
