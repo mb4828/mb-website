@@ -1,22 +1,30 @@
 'use client';
 
 import styles from './parallax.module.scss';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Parallax({
   background = '',
   foreground = '',
   yOffset = 5,
-  aspectRatio = '19 / 9',
   size = '80%',
 }: {
   background?: string;
   foreground?: string;
   yOffset?: number;
-  aspectRatio?: string;
   size?: string;
 }) {
+  const [aspectRatio, setAspectRatio] = useState('19 / 9');
+
   useEffect(() => {
+    function aspectRatio() {
+      if (window.innerWidth > 1920) {
+        setAspectRatio('30 / 9');
+      } else {
+        setAspectRatio('19 / 9');
+      }
+    }
+
     function parallax() {
       // parallax effect
       const el = document.getElementById(styles.background);
@@ -25,18 +33,21 @@ export default function Parallax({
       const wrapperHeight = document.getElementById(styles.wrapper)?.offsetHeight ?? 0;
       if (el && el2) {
         el.style.backgroundPosition = '50% ' + (windowYOffset * 0.6 + 1) + 'px';
-        el2.style.backgroundPositionY = wrapperHeight / yOffset + windowYOffset * 0.3 + 'px';
-
-        // fade out and blur as you scroll
-        const opacity = Math.max(0, Math.min(1, (wrapperHeight - windowYOffset) / (wrapperHeight / 2)));
-        const blur = Math.min(5, Math.max(0, (5 / (wrapperHeight / 2)) * (windowYOffset - wrapperHeight / 2)));
-        el2.style.opacity = opacity.toString();
-        el2.style.filter = `blur(${blur}px)`;
+        el2.style.backgroundPositionY = wrapperHeight / yOffset + windowYOffset * 0.3 + 1 + 'px';
       }
     }
 
+    window.addEventListener('resize', aspectRatio);
+    window.addEventListener('resize', parallax);
     window.addEventListener('scroll', parallax);
-    parallax();
+    aspectRatio();
+    setTimeout(() => parallax(), 1);
+
+    return () => {
+      window.removeEventListener('resize', aspectRatio);
+      window.removeEventListener('resize', parallax);
+      window.removeEventListener('scroll', parallax);
+    };
   }, [yOffset]);
 
   return (
