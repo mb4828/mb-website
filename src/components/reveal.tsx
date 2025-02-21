@@ -29,7 +29,13 @@ export default function Reveal({
     }
 
     window.addEventListener('scroll', reveal);
+    window.addEventListener('resize', reveal);
     reveal();
+
+    return () => {
+      window.removeEventListener('scroll', reveal);
+      window.removeEventListener('resize', reveal);
+    };
   }, [revealOnLoad, id]);
 
   return (
