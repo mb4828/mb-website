@@ -2,7 +2,7 @@
 
 import styles from './page.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAward, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faCertificate, faCheck, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/reveal';
@@ -189,31 +189,33 @@ export default function WorkPage() {
               <h2>Certifications</h2>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
+                  <span className="fa-layers fa-fw" style={{ marginRight: 4 }}>
+                    <FontAwesomeIcon icon={faCertificate} size="lg" />
+                    <FontAwesomeIcon icon={faCheck} inverse transform="shrink-4" />
+                  </span>
                   &nbsp;
                   <Link href="https://www.hackerrank.com/certificates/1d2bd2382beb" target="_blank" rel="noopener">
                     Software Engineering | HackerRank
                   </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
+                  <span className="fa-layers fa-fw" style={{ marginRight: 4 }}>
+                    <FontAwesomeIcon icon={faCertificate} size="lg" />
+                    <FontAwesomeIcon icon={faCheck} inverse transform="shrink-4" />
+                  </span>
                   &nbsp;
                   <Link href="https://www.hackerrank.com/certificates/b8cd8a8e10b1" target="_blank" rel="noopener">
                     Frontend Development | HackerRank
                   </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
+                  <span className="fa-layers fa-fw" style={{ marginRight: 4 }}>
+                    <FontAwesomeIcon icon={faCertificate} size="lg" />
+                    <FontAwesomeIcon icon={faCheck} inverse transform="shrink-4" />
+                  </span>
                   &nbsp;
-                  <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
-                    JavaScript | LinkedIn
-                  </Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faAward} size="lg" style={{ marginRight: 4 }} />
-                  &nbsp;
-                  <Link href="https://www.linkedin.com/in/matt-brauner/details/skills/" target="_blank" rel="noopener">
-                    Python | LinkedIn
+                  <Link href="https://www.hackerrank.com/certificates/9f3f33080880" target="_blank" rel="noopener">
+                    Python | HackerRank
                   </Link>
                 </li>
               </ul>
