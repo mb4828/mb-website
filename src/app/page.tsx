@@ -2,14 +2,15 @@
 
 import styles from './page.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCertificate, faCheck, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/reveal';
 import Parallax from '@/components/parallax';
 import { useEffect, useState } from 'react';
 import StackIcon from 'tech-stack-icons';
-import Scroller from '@/components/scroller';
+import Tooltip from '@mui/joy/Tooltip';
+import { CertifiedIcon } from '@/components/certified-icon';
 
 export default function WorkPage() {
   const BLK_LIGHT_SRC = '/blackrock.jpeg';
@@ -17,7 +18,25 @@ export default function WorkPage() {
   const today = new Date();
   const yearsExp = today.getFullYear() - 2015;
   const [blkImageSrc, setBlkImageSrc] = useState(BLK_LIGHT_SRC);
-  const [screenWidth, setScreenWidth] = useState(0);
+
+  const skills = [
+    { name: 'js', label: 'Javascript' },
+    { name: 'typescript', label: 'Typescript' },
+    { name: 'jquery', label: 'jQuery' },
+    { name: 'html5', label: 'HTML5' },
+    { name: 'css3', label: 'CSS3' },
+    { name: 'angular17', label: 'Angular' },
+    { name: 'reactjs', label: 'React' },
+    { name: 'python', label: 'Python' },
+    { name: 'django', label: 'Django' },
+    { name: 'java', label: 'Java' },
+    { name: 'docker', label: 'Docker' },
+    { name: 'wordpress', label: 'Wordpress' },
+    { name: 'mysql', label: 'MySQL' },
+    { name: 'cassandradb', label: 'Cassandra' },
+    { name: 'bash', label: 'Bash' },
+    { name: 'git', label: 'Git' },
+  ];
 
   useEffect(() => {
     // Update the image based on dark mode preference
@@ -31,22 +50,14 @@ export default function WorkPage() {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     mediaQuery.addEventListener('change', updateImageSrc);
 
-    // Update the screen width on resize
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', updateScreenWidth);
-
     // On load
     if (mediaQuery.matches) {
       setBlkImageSrc(BLK_DARK_SRC);
     }
-    setScreenWidth(window.innerWidth);
 
     // Cleanup event listener on component unmount
     return () => {
       mediaQuery.removeEventListener('change', updateImageSrc);
-      window.removeEventListener('resize', updateScreenWidth);
     };
   }, []);
 
@@ -98,122 +109,38 @@ export default function WorkPage() {
           <div className={styles.flex_row}>
             <Reveal className={`${styles.third_width} ${styles.skills}`}>
               <h2>Skills</h2>
-              <Scroller width={screenWidth > 1000 ? 'calc(1200px / 3 - 3em)' : 'calc(100vw - 4em)'}>
-                <ul>
-                  {/* javascript */}
-                  <li>
-                    <StackIcon name="js" />
-                    JavaScript
-                  </li>
-                  <li>
-                    <StackIcon name="typescript" />
-                    Typescript
-                  </li>
-                  <li>
-                    <StackIcon name="jquery" />
-                    jQuery
-                  </li>
-                  <li>
-                    <StackIcon name="html5" />
-                    HTML
-                  </li>
-                  <li>
-                    <StackIcon name="css3" />
-                    CSS
-                  </li>
-                  <li>
-                    <StackIcon name="angular17" />
-                    Angular
-                  </li>
-                  <li>
-                    <StackIcon name="reactjs" />
-                    React
-                  </li>
-
-                  {/* python */}
-                  <li>
-                    <StackIcon name="python" />
-                    Python
-                  </li>
-                  <li>
-                    <StackIcon name="django" />
-                    Django
-                  </li>
-
-                  {/* ruby */}
-                  <li>
-                    <StackIcon name="ruby" />
-                    Ruby
-                  </li>
-                  <li>
-                    <StackIcon name="rails" />
-                    Rails
-                  </li>
-
-                  {/* java */}
-                  <li>
-                    <StackIcon name="java" />
-                    Java
-                  </li>
-
-                  {/* misc */}
-                  <li>
-                    <StackIcon name="docker" />
-                    Docker
-                  </li>
-                  <li>
-                    <StackIcon name="wordpress" />
-                    Wordpress
-                  </li>
-                  <li>
-                    <StackIcon name="mysql" />
-                    SQL
-                  </li>
-                  <li>
-                    <StackIcon name="cassandradb" />
-                    Cassandra
-                  </li>
-                  <li>
-                    <StackIcon name="bash" />
-                    Bash
-                  </li>
-                  <li>
-                    <StackIcon name="git" />
-                    Git
-                  </li>
-                </ul>
-              </Scroller>
+              <ul>
+                {skills
+                  .sort((a, b) => (a.label < b.label ? -1 : 1))
+                  .map((skill) => (
+                    <li key={skill.name}>
+                      <Tooltip title={skill.label} variant="plain" arrow>
+                        <div>
+                          <StackIcon name={skill.name} />
+                        </div>
+                      </Tooltip>
+                    </li>
+                  ))}
+              </ul>
             </Reveal>
 
             <Reveal className={`${styles.third_width} ${styles.certifications}`}>
               <h2>Certifications</h2>
               <ul>
                 <li>
-                  <span className="fa-layers fa-fw" style={{ marginRight: 4 }}>
-                    <FontAwesomeIcon icon={faCertificate} size="lg" />
-                    <FontAwesomeIcon icon={faCheck} inverse transform="shrink-4" />
-                  </span>
-                  &nbsp;
+                  <CertifiedIcon />
                   <Link href="https://www.hackerrank.com/certificates/1d2bd2382beb" target="_blank" rel="noopener">
                     Software Engineering | HackerRank
                   </Link>
                 </li>
                 <li>
-                  <span className="fa-layers fa-fw" style={{ marginRight: 4 }}>
-                    <FontAwesomeIcon icon={faCertificate} size="lg" />
-                    <FontAwesomeIcon icon={faCheck} inverse transform="shrink-4" />
-                  </span>
-                  &nbsp;
+                  <CertifiedIcon />
                   <Link href="https://www.hackerrank.com/certificates/b8cd8a8e10b1" target="_blank" rel="noopener">
                     Frontend Development | HackerRank
                   </Link>
                 </li>
                 <li>
-                  <span className="fa-layers fa-fw" style={{ marginRight: 4 }}>
-                    <FontAwesomeIcon icon={faCertificate} size="lg" />
-                    <FontAwesomeIcon icon={faCheck} inverse transform="shrink-4" />
-                  </span>
-                  &nbsp;
+                  <CertifiedIcon />
                   <Link href="https://www.hackerrank.com/certificates/9f3f33080880" target="_blank" rel="noopener">
                     Python | HackerRank
                   </Link>
