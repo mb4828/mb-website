@@ -7,6 +7,7 @@
 
   .flex_row {
     display: flex;
+    flex-wrap: wrap;
     gap: 3em;
   }
 
@@ -16,6 +17,9 @@
 
   .half_width {
     flex-basis: calc(50% - 3em);
+    li {
+      flex-basis: 100%;
+    }
   }
 
   .third_width {
@@ -81,11 +85,15 @@
     order: 1;
   }
 
-  .certifications {
+  .projects {
     order: 2;
   }
 
-  .skills {
+  .certifications {
     order: 3;
+  }
+
+  .skills {
+    order: 4;
   }
 }

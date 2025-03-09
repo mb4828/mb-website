@@ -27,7 +27,10 @@ export default function MusicPage() {
         <Reveal>
           <h2>Instruments</h2>
           <ul>
-            <li>Clarinets &mdash; B♭, E♭, A, Bass</li>
+            <li>
+              Clarinets &mdash; B<span className={styles.flat}>♭</span>, E<span className={styles.flat}>♭</span>, A,
+              Bass
+            </li>
             <li>Saxophones &mdash; Soprano, Alto, Tenor</li>
           </ul>
         </Reveal>
