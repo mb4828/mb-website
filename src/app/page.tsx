@@ -9,15 +9,10 @@ import Parallax from '@/components/parallax';
 import { useEffect, useState } from 'react';
 import StackIcon from 'tech-stack-icons';
 import Tooltip from '@mui/joy/Tooltip';
-import { CertifiedIcon } from '@/components/certified-icon';
 
 export default function WorkPage() {
-  const BLK_LIGHT_SRC = '/blackrock.jpeg';
-  const BLK_DARK_SRC = '/blackrock-dark.jpeg';
   const today = new Date();
   const yearsExp = today.getFullYear() - 2015;
-  const [blkImageSrc, setBlkImageSrc] = useState(BLK_LIGHT_SRC);
-
   const skills = [
     { name: 'js', label: 'Javascript' },
     { name: 'typescript', label: 'Typescript' },
@@ -36,29 +31,6 @@ export default function WorkPage() {
     { name: 'bash', label: 'Bash' },
     { name: 'git', label: 'Git' },
   ];
-
-  useEffect(() => {
-    // Update the image based on dark mode preference
-    const updateImageSrc = (e: any) => {
-      if (e.matches) {
-        setBlkImageSrc(BLK_DARK_SRC);
-      } else {
-        setBlkImageSrc(BLK_LIGHT_SRC);
-      }
-    };
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    mediaQuery.addEventListener('change', updateImageSrc);
-
-    // On load
-    if (mediaQuery.matches) {
-      setBlkImageSrc(BLK_DARK_SRC);
-    }
-
-    // Cleanup event listener on component unmount
-    return () => {
-      mediaQuery.removeEventListener('change', updateImageSrc);
-    };
-  }, []);
 
   return (
     <>
