@@ -83,30 +83,26 @@ export default function MusicPage() {
           <h2>Recordings</h2>
           <ul>
             <li>
-              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4 }} />
-              &nbsp;
               <Link href="/music/brahms.mp3">
+                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
                 <i>Clarinet Quintet in B minor Op.115</i>, Brahms | Colgate University Chamber Players
               </Link>
             </li>
             <li className="order_mobile_last">
-              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4 }} />
-              &nbsp;
               <Link href="/music/danzon.mp3">
+                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
                 <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
               </Link>
             </li>
             <li>
-              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4 }} />
-              &nbsp;
               <Link href="/music/bartok.mp3">
+                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
                 <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
               </Link>
             </li>
             <li className="order_mobile_last">
-              <FontAwesomeIcon icon={faFileAudio} size="lg" style={{ marginRight: 4 }} />
-              &nbsp;
               <Link href="/music/gershwin.mp3">
+                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
                 <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
               </Link>
             </li>

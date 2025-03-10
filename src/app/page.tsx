@@ -6,7 +6,6 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Reveal from '@/components/reveal';
 import Parallax from '@/components/parallax';
-import { useEffect, useState } from 'react';
 import StackIcon from 'tech-stack-icons';
 import Tooltip from '@mui/joy/Tooltip';
 
@@ -124,7 +123,7 @@ export default function WorkPage() {
             <Reveal className={`${styles.half_width} ${styles.resume}`}>
               <h2>Resume</h2>
               <Link href="/Matt Brauner Resume Web.pdf" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={faFilePdf} size="lg" style={{ marginRight: 4 }} />
+                <FontAwesomeIcon icon={faFilePdf} className="mr-4" />
                 View Resume
               </Link>
             </Reveal>
