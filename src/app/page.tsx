@@ -66,7 +66,7 @@ export default function WorkPage() {
                 </li>
                 <li>
                   <Link href="https://logbook.mattbrauner.com" target="_blank" rel="noopener">
-                    Interactive flight logbook
+                    My flight logbook
                   </Link>
                   {' [ '}
                   <Link href="https://github.com/mb4828/my-flight-log" target="_blank" rel="noopener">
