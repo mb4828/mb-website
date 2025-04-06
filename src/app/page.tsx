@@ -51,6 +51,31 @@ export default function WorkPage() {
           </Reveal>
 
           <div className={styles.flex_row}>
+            <Reveal className={`${styles.half_width} ${styles.skills}`}>
+              <h2>Skills</h2>
+              <ul>
+                {skills
+                  .sort((a, b) => (a.label < b.label ? -1 : 1))
+                  .map((skill) => (
+                    <li key={skill.name}>
+                      <Tooltip title={skill.label} variant="plain" arrow>
+                        <div>
+                          <StackIcon name={skill.name} />
+                        </div>
+                      </Tooltip>
+                    </li>
+                  ))}
+              </ul>
+            </Reveal>
+
+            <Reveal className={`${styles.half_width} ${styles.resume}`}>
+              <h2>Resume</h2>
+              <Link href="/Matt Brauner Resume Web.pdf" target="_blank" rel="noopener">
+                <FontAwesomeIcon icon={faFilePdf} className="mr-4" />
+                View Resume
+              </Link>
+            </Reveal>
+
             <Reveal className={`${styles.half_width} ${styles.projects}`}>
               <h2>Projects</h2>
               <ul>
@@ -101,31 +126,6 @@ export default function WorkPage() {
                   </Link>
                 </li>
               </ul>
-            </Reveal>
-
-            <Reveal className={`${styles.half_width} ${styles.skills}`}>
-              <h2>Skills</h2>
-              <ul>
-                {skills
-                  .sort((a, b) => (a.label < b.label ? -1 : 1))
-                  .map((skill) => (
-                    <li key={skill.name}>
-                      <Tooltip title={skill.label} variant="plain" arrow>
-                        <div>
-                          <StackIcon name={skill.name} />
-                        </div>
-                      </Tooltip>
-                    </li>
-                  ))}
-              </ul>
-            </Reveal>
-
-            <Reveal className={`${styles.half_width} ${styles.resume}`}>
-              <h2>Resume</h2>
-              <Link href="/Matt Brauner Resume Web.pdf" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={faFilePdf} className="mr-4" />
-                View Resume
-              </Link>
             </Reveal>
           </div>
         </div>
