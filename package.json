@@ -34,5 +34,8 @@
     "sharp": "^0.32.6",
     "tech-stack-icons": "^2.1.0",
     "typescript": "5.2.2"
+  },
+  "resolutions": {
+    "tar-fs": "^2.1.2"
   }
 }
