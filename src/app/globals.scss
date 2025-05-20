@@ -132,9 +132,8 @@ a:hover {
 }
 
 .custom-mui-button {
-  color: var(--button-text-color);
+  color: var(--button-text-color) !important;
   background-color: var(--button-background-color);
-  font-weight: normal;
   text-decoration: none;
   transition: filter 0.3s ease;
   z-index: 0 !important;
@@ -143,13 +142,13 @@ a:hover {
   }
 }
 .custom-mui-button:hover {
-  color: var(--button-text-color);
+  color: var(--button-text-color) !important;
   background-color: var(--button-background-color);
   text-decoration: none;
-  filter: brightness(110%);
+  filter: brightness(110%) !important;
 }
 .custom-mui-button:visited {
-  color: var(--button-text-color);
+  color: var(--button-text-color) !important;
 }
 
 .svg-inline--fa {
