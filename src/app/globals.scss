@@ -133,7 +133,7 @@ a:hover {
 
 .custom-mui-button {
   color: var(--button-text-color) !important;
-  background-color: var(--button-background-color);
+  background-color: var(--button-background-color) !important;
   text-decoration: none;
   transition: filter 0.3s ease;
   z-index: 0 !important;
@@ -143,7 +143,7 @@ a:hover {
 }
 .custom-mui-button:hover {
   color: var(--button-text-color) !important;
-  background-color: var(--button-background-color);
+  background-color: var(--button-background-color) !important;
   text-decoration: none;
   filter: brightness(110%) !important;
 }
