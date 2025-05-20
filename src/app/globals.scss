@@ -134,6 +134,7 @@ a:hover {
 .custom-mui-button {
   color: var(--button-text-color) !important;
   background-color: var(--button-background-color) !important;
+  text-align: left;
   text-decoration: none;
   transition: filter 0.3s ease;
   z-index: 0 !important;
@@ -172,5 +173,8 @@ a:hover {
   }
   li.order_mobile_last {
     order: 99;
+  }
+  .custom-mui-button {
+    padding: 8px !important;
   }
 }
