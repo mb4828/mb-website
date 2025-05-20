@@ -16,14 +16,14 @@
   }
 
   .half_width {
-    flex-basis: calc(50% - 3em);
+    flex-basis: calc(50% - 1.5em);
     li {
       flex-basis: 100%;
     }
   }
 
   .third_width {
-    flex-basis: 33.3%;
+    flex-basis: calc(33% - 1.8em);
     li {
       flex-basis: 100%;
     }
@@ -79,9 +79,5 @@
 
   .third_width {
     flex-basis: 100% !important;
-  }
-
-  .skills {
-    order: 4;
   }
 }

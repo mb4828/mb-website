@@ -1,12 +1,9 @@
 import './globals.scss';
-import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import Script from 'next/script';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import Chat from '@/components/chat';
-import { Graph, Person, WebSite, WithContext } from 'schema-dts';
-import { SITE_NAME } from '@/components/constants';
+import { SITE_NAME, JSON_LD } from '@/components/constants';
+import BaseComponent from '@/components/base.module';
+import { Metadata } from 'next';
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -50,63 +47,6 @@ export const metadata: Metadata = {
     lastName: 'Brauner',
   },
 };
-
-export const viewport = {};
-
-const jsonLdPerson: WithContext<Person> = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Matt Brauner',
-  jobTitle: 'Senior Software Engineer',
-  url: 'https://www.mattbrauner.com',
-  image: 'https://www.mattbrauner.com/matt_headshot_original.jpg',
-  worksFor: [
-    {
-      '@type': 'Organization',
-      name: 'BlackRock',
-      sameAs: 'https://blackrock.com',
-    },
-  ],
-  alumniOf: [
-    {
-      '@type': 'HighSchool',
-      name: 'Mahwah High School',
-    },
-    {
-      '@type': 'CollegeOrUniversity',
-      name: 'Colgate University',
-      sameAs: 'https://colgate.edu',
-    },
-  ],
-  gender: 'Male',
-  description: PAGE_DESC,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'New York',
-    addressCountry: 'United States',
-  },
-  sameAs: [
-    'https://www.facebook.com/matt.brauner/',
-    'https://www.instagram.com/matt.brauner/',
-    'https://www.threads.net/@matt.brauner',
-    'https://www.linkedin.com/in/matt-brauner/',
-    'https://github.com/mb4828',
-  ],
-};
-
-const jsonLdWebSite: WithContext<WebSite> = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: SITE_NAME,
-  url: 'https://www.mattbrauner.com',
-  image: 'https://www.mattbrauner.com/matt_og2.jpeg',
-};
-
-const jsonLd: Graph = {
-  '@context': 'https://schema.org',
-  '@graph': [jsonLdPerson, jsonLdWebSite],
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -129,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })(window,document,'script','dataLayer','GTM-NGHRDSMQ');
           `}
         </Script>
-        <Script id="ld+json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <Script id="ld+json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </head>
       <body className={opensans.className}>
         {/* Google Tag Manager */}
@@ -142,10 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ></iframe>
         </noscript>
 
-        <Header />
-        {children}
-        <Footer />
-        <Chat />
+        <BaseComponent>{children}</BaseComponent>
       </body>
     </html>
   );

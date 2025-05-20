@@ -20,11 +20,15 @@
       border-radius: 50%;
       text-align: center;
       line-height: 48px;
-      background: var(--footer-link-color);
+      background: var(--button-background-color);
+      transition: filter 0.3s ease;
+    }
+    .link:hover {
+      filter: brightness(110%);
     }
 
     svg {
-      color: var(--footer-icon-color);
+      color: var(--button-text-color);
     }
   }
 
