@@ -113,21 +113,31 @@ export default function WorkPage() {
               <h2>Projects</h2>
               <ul>
                 <li>
-                  <Link href="https://mb4828.github.io/mta-subway-map/" target="_blank" rel="noopener">
-                    NYC subway map
-                  </Link>
-                  {' [ '}
-                  <Link href="https://github.com/mb4828/mta-subway-map" target="_blank" rel="noopener">
-                    GitHub
-                  </Link>
-                  {' ]'}
-                </li>
-                <li>
                   <Link href="https://logbook.mattbrauner.com" target="_blank" rel="noopener">
                     My flight logbook
                   </Link>
                   {' [ '}
                   <Link href="https://github.com/mb4828/my-flight-log" target="_blank" rel="noopener">
+                    GitHub
+                  </Link>
+                  {' ]'}
+                </li>
+                <li>
+                  <Link href="https://notepad.mattbrauner.com" target="_blank" rel="noopener">
+                    Offline text editor
+                  </Link>
+                  {' [ '}
+                  <Link href="https://github.com/mb4828/offline-text-editor" target="_blank" rel="noopener">
+                    GitHub
+                  </Link>
+                  {' ]'}
+                </li>
+                <li>
+                  <Link href="https://mb4828.github.io/mta-subway-map/" target="_blank" rel="noopener">
+                    NYC subway map
+                  </Link>
+                  {' [ '}
+                  <Link href="https://github.com/mb4828/mta-subway-map" target="_blank" rel="noopener">
                     GitHub
                   </Link>
                   {' ]'}
