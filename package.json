@@ -36,6 +36,7 @@
     "typescript": "5.2.2"
   },
   "resolutions": {
+    "brace-expansion": "^1.1.12",
     "tar-fs": "^2.1.2"
   }
 }

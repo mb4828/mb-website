@@ -67,8 +67,8 @@ export default function MusicPage() {
               </Link>
             </li>
             <li>
-              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra | Queens, NY
+              <Link href="https://manhattansummerwinds.org" target="_blank" rel="noopener">
+                Manhattan Summer Winds | Manhattan, NY
               </Link>
             </li>
             <li className="order_mobile_last">
@@ -81,6 +81,12 @@ export default function MusicPage() {
               </Link>
             </li>
             <li>
+              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
+                Jackson Heights Orchestra | Queens, NY
+              </Link>
+            </li>
+            <li className="order_mobile_last">OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
+            <li>
               <Link
                 href="https://www.vagelos.columbia.edu/education/student-resources/office-student-affairs/vp-s-club/clubs-and-organizations/arts-literature-and-entertainment-clubs/cuimc-symphony-orchestra"
                 target="_blank"
@@ -89,7 +95,6 @@ export default function MusicPage() {
                 Columbia University Medical Center Orchestra | Manhattan, NY
               </Link>
             </li>
-            <li className="order_mobile_last">OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
           </ul>
         </Reveal>
 
