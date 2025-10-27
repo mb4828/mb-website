@@ -70,7 +70,7 @@ export default function MusicPage() {
 
             <li>
               <Link href="https://www.doctorsorchestra.org" target="_blank" rel="noopener">
-                Doctors' Orchestral Society of New York | Manhattan, NY
+                Doctors&apos; Orchestral Society of New York | Manhattan, NY
               </Link>
             </li>
 
