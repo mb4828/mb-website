@@ -50,14 +50,49 @@ export default function MusicPage() {
         </Reveal>
 
         <Reveal>
-          <h2>Ensembles Performed With</h2>
+          <h2>Ensembles Worked With</h2>
           <ul>
+            <li>
+              <Link href="https://www.centresymphony.com" target="_blank" rel="noopener">
+                Centre Symphony Orchestra | Manhattan, NY
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="https://www.vagelos.columbia.edu/education/student-resources/office-student-affairs/vp-s-club/clubs-and-organizations/arts-literature-and-entertainment-clubs/cuimc-symphony-orchestra"
+                target="_blank"
+                rel="noopener"
+              >
+                Columbia University Medical Center Orchestra | Manhattan, NY
+              </Link>
+            </li>
+
+            <li>
+              <Link href="https://www.doctorsorchestra.org" target="_blank" rel="noopener">
+                Doctors' Orchestral Society of New York | Manhattan, NY
+              </Link>
+            </li>
+
+            <li>
+              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
+                Jackson Heights Orchestra | Queens, NY
+              </Link>
+            </li>
+
             <li>
               <Link href="https://manhattanwindensemble.com/" target="_blank" rel="noopener">
                 Manhattan Wind Ensemble | Manhattan, NY
               </Link>
             </li>
-            <li className="order_mobile_last">
+
+            <li>
+              <Link href="https://manhattansummerwinds.org" target="_blank" rel="noopener">
+                Manhattan Summer Winds | Manhattan, NY
+              </Link>
+            </li>
+
+            <li>
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/university-orchestra"
                 target="_blank"
@@ -66,33 +101,14 @@ export default function MusicPage() {
                 Colgate University Orchestra | Hamilton, NY
               </Link>
             </li>
+
             <li>
-              <Link href="https://manhattansummerwinds.org" target="_blank" rel="noopener">
-                Manhattan Summer Winds | Manhattan, NY
-              </Link>
-            </li>
-            <li className="order_mobile_last">
               <Link
                 href="https://www.colgate.edu/academics/departments-programs/department-music/music-groups/chamber-players"
                 target="_blank"
                 rel="noopener"
               >
                 Colgate University Chamber Players | Hamilton, NY
-              </Link>
-            </li>
-            <li>
-              <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra | Queens, NY
-              </Link>
-            </li>
-            <li className="order_mobile_last">OnStage, Inc. Pit Orchestra | Ramsey, NJ</li>
-            <li>
-              <Link
-                href="https://www.vagelos.columbia.edu/education/student-resources/office-student-affairs/vp-s-club/clubs-and-organizations/arts-literature-and-entertainment-clubs/cuimc-symphony-orchestra"
-                target="_blank"
-                rel="noopener"
-              >
-                Columbia University Medical Center Orchestra | Manhattan, NY
               </Link>
             </li>
           </ul>
@@ -104,7 +120,13 @@ export default function MusicPage() {
             <li>
               <Link href="/music/brahms.mp3">
                 <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
-                <i>Clarinet Quintet in B minor Op.115</i>, Brahms | Colgate University Chamber Players
+                <i>Clarinet Quintet, Op.115</i>, Brahms | Colgate University Chamber Players
+              </Link>
+            </li>
+            <li>
+              <Link href="/music/bartok.mp3">
+                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
+                <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
               </Link>
             </li>
             <li>
@@ -117,12 +139,6 @@ export default function MusicPage() {
               <Link href="/music/marquez.mp3">
                 <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
                 <i>Danzón No. 2</i>, Arturo Márquez | Manhattan Wind Ensemble
-              </Link>
-            </li>
-            <li>
-              <Link href="/music/bartok.mp3">
-                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
-                <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
               </Link>
             </li>
             <li>
