@@ -54,7 +54,7 @@ export default function MusicPage() {
           <ul>
             <li>
               <Link href="https://www.centresymphony.com" target="_blank" rel="noopener">
-                Centre Symphony Orchestra | Manhattan, NY
+                Centre Symphony Orchestra
               </Link>
             </li>
 
@@ -64,31 +64,31 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Columbia University Medical Center Orchestra | Manhattan, NY
+                Columbia University Medical Center Orchestra
               </Link>
             </li>
 
             <li>
               <Link href="https://www.doctorsorchestra.org" target="_blank" rel="noopener">
-                Doctors&apos; Orchestral Society of New York | Manhattan, NY
+                Doctors&apos; Orchestral Society of New York
               </Link>
             </li>
 
             <li>
               <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra | Queens, NY
+                Jackson Heights Orchestra
               </Link>
             </li>
 
             <li>
               <Link href="https://manhattanwindensemble.com/" target="_blank" rel="noopener">
-                Manhattan Wind Ensemble | Manhattan, NY
+                Manhattan Wind Ensemble
               </Link>
             </li>
 
             <li>
               <Link href="https://manhattansummerwinds.org" target="_blank" rel="noopener">
-                Manhattan Summer Winds | Manhattan, NY
+                Manhattan Summer Winds
               </Link>
             </li>
 
@@ -98,7 +98,7 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Orchestra | Hamilton, NY
+                Colgate University Orchestra
               </Link>
             </li>
 
@@ -108,7 +108,7 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Chamber Players | Hamilton, NY
+                Colgate University Chamber Players
               </Link>
             </li>
           </ul>
