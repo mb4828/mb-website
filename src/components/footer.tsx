@@ -2,8 +2,7 @@
 
 import styles from './footer.module.scss';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { FacebookLogoIcon, GithubLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 
 export default function Footer() {
   const today = new Date();
@@ -18,7 +17,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="Facebook"
         >
-          <FontAwesomeIcon icon={faFacebookF} size="xl" />
+          <FacebookLogoIcon size={28} weight="bold" />
         </Link>
 
         <Link
@@ -28,7 +27,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="Instagram"
         >
-          <FontAwesomeIcon icon={faInstagram} size="xl" />
+          <InstagramLogoIcon size={28} weight="bold" />
         </Link>
 
         <Link
@@ -38,7 +37,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
+          <LinkedinLogoIcon size={28} weight="bold" />
         </Link>
 
         <Link
@@ -48,7 +47,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="GitHub"
         >
-          <FontAwesomeIcon icon={faGithub} size="xl" />
+          <GithubLogoIcon size={28} weight="bold" />
         </Link>
       </div>
 

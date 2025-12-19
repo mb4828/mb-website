@@ -4,11 +4,9 @@ import { useChat } from '@/components/chat-context';
 import styles from './page.module.scss';
 import Parallax from '@/components/parallax';
 import Reveal from '@/components/reveal';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faFileAudio } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, ButtonGroup } from '@mui/joy';
 import Link from 'next/link';
+import { ChatTeardropTextIcon, InstagramLogoIcon, FileAudioIcon } from '@phosphor-icons/react';
 
 export default function MusicPage() {
   const { openChat } = useChat();
@@ -31,8 +29,18 @@ export default function MusicPage() {
           </p>
 
           <ButtonGroup color="primary" variant="solid" size="lg" spacing={3} className="button-group">
+            <Button
+              component="a"
+              href="https://instagram.com/matt.brauner/"
+              target="_blank"
+              rel="noopener"
+              className="custom-mui-button"
+            >
+              <InstagramLogoIcon size={20} weight="bold" className="mr-4" />
+              View Instagram
+            </Button>
             <Button onClick={openChat} className="custom-mui-button">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-8" />
+              <ChatTeardropTextIcon size={20} weight="bold" className="mr-4" />
               Contact Matt
             </Button>
           </ButtonGroup>
@@ -119,31 +127,31 @@ export default function MusicPage() {
           <ul>
             <li>
               <Link href="/music/brahms.mp3">
-                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
+                <FileAudioIcon size={18} weight="regular" className="mr-4" />
                 <i>Clarinet Quintet, Op.115</i>, Brahms | Colgate University Chamber Players
               </Link>
             </li>
             <li>
               <Link href="/music/bartok.mp3">
-                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
+                <FileAudioIcon size={18} weight="regular" className="mr-4" />
                 <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
               </Link>
             </li>
             <li>
               <Link href="/music/danzon.mp3">
-                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
+                <FileAudioIcon size={18} weight="regular" className="mr-4" />
                 <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
               </Link>
             </li>
             <li>
               <Link href="/music/marquez.mp3">
-                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
+                <FileAudioIcon size={18} weight="regular" className="mr-4" />
                 <i>Danzón No. 2</i>, Arturo Márquez | Manhattan Wind Ensemble
               </Link>
             </li>
             <li>
               <Link href="/music/gershwin.mp3">
-                <FontAwesomeIcon icon={faFileAudio} className="mr-4" />
+                <FileAudioIcon size={18} weight="regular" className="mr-4" />
                 <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
               </Link>
             </li>

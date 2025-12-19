@@ -1,8 +1,6 @@
 'use client';
 
 import styles from './page.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileLines, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import Link from 'next/link';
 import Reveal from '@/components/reveal';
 import Parallax from '@/components/parallax';
@@ -10,6 +8,7 @@ import StackIcon from 'tech-stack-icons';
 import Tooltip from '@mui/joy/Tooltip';
 import { Button, ButtonGroup } from '@mui/joy';
 import { useChat } from '@/components/chat-context';
+import { ChatTeardropTextIcon, UserListIcon } from '@phosphor-icons/react';
 
 export default function WorkPage() {
   const { openChat } = useChat();
@@ -60,11 +59,11 @@ export default function WorkPage() {
                 rel="noopener"
                 className="custom-mui-button"
               >
-                <FontAwesomeIcon icon={faFileLines} className="mr-8" />
+                <UserListIcon size={20} weight="bold" className="mr-4" />
                 View Resume
               </Button>
               <Button onClick={openChat} className="custom-mui-button">
-                <FontAwesomeIcon icon={faEnvelope} className="mr-8" />
+                <ChatTeardropTextIcon size={20} weight="bold" className="mr-4" />
                 Contact Matt
               </Button>
             </ButtonGroup>

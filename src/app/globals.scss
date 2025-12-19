@@ -11,6 +11,8 @@
   --header-font-color: var(--white);
   --button-text-color: var(--white);
   --button-background-color: var(--secondary-color);
+  --button-hover-text-color: rgba(255, 255, 255, 0.8);
+  --button-hover-glow-color: rgba(18, 94, 138, 0.4);
 }
 
 // dark mode
@@ -27,6 +29,8 @@
     --header-font-color: var(--white);
     --button-text-color: rgba(0, 0, 0, 0.9);
     --button-background-color: var(--secondary-color);
+    --button-hover-text-color: rgba(0, 0, 0, 0.7);
+    --button-hover-glow-color: rgba(27, 141, 208, 0.4);
   }
 }
 
@@ -132,24 +136,17 @@ a:hover {
   background-color: var(--button-background-color) !important;
   text-align: left;
   text-decoration: none;
-  transition: filter 0.3s ease;
+  transition: all 0.3s;
   z-index: 0 !important;
-  .svg-inline--fa {
-    color: var(--button-text-color);
-  }
 }
 .custom-mui-button:hover {
-  color: var(--button-text-color) !important;
+  color: var(--button-hover-text-color) !important;
   background-color: var(--button-background-color) !important;
   text-decoration: none;
-  filter: brightness(110%) !important;
+  box-shadow: 0 0 16px var(--button-hover-glow-color); // glow
 }
 .custom-mui-button:visited {
   color: var(--button-text-color) !important;
-}
-
-.svg-inline--fa {
-  color: var(--secondary-color); // font awesome icon default color
 }
 
 .mr-4 {

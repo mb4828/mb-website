@@ -2,9 +2,6 @@
 
 import axios from 'axios';
 import styles from './chat.module.scss';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faXmark, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Button,
   Card,
@@ -19,9 +16,11 @@ import {
 import { CssVarsProvider } from '@mui/joy/styles';
 import { FormEvent, forwardRef, useImperativeHandle, useState } from 'react';
 import { useFloating, autoUpdate } from '@floating-ui/react';
+import { ChatTeardropTextIcon, PaperPlaneRightIcon, XIcon } from '@phosphor-icons/react';
 
 const Chat = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenIcon, setIsOpenIcon] = useState(false);
   const { refs, floatingStyles } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -44,11 +43,13 @@ const Chat = forwardRef((props, ref) => {
   function openChat(event: React.MouseEvent<HTMLElement>) {
     if (!isOpen) {
       // open chat
+      setIsOpenIcon(true);
       setIsOpen(true);
     } else {
       // close chat
       document.getElementById('chat_el')?.classList.remove(styles.open_chat);
       document.getElementById('chat_el')?.classList.add(styles.close_chat);
+      setIsOpenIcon(false);
       setTimeout(() => setIsOpen(false), 500);
     }
   }
@@ -80,7 +81,14 @@ const Chat = forwardRef((props, ref) => {
           aria-label="Contact Matt"
           ref={refs.setReference}
         >
-          <FontAwesomeIcon icon={isOpen ? faXmark : faEnvelope} size="xl" flip="horizontal" fixedWidth />
+          <div className={`${styles.chat_icon_wrapper} ${isOpenIcon ? styles.isOpen : ''}`}>
+            <div className={styles.chat_icon_closed}>
+              <ChatTeardropTextIcon size={26} weight="bold" />
+            </div>
+            <div className={styles.chat_icon_open}>
+              <XIcon size={26} weight="bold" />
+            </div>
+          </div>
         </Button>
       </div>
 
@@ -142,7 +150,7 @@ const Chat = forwardRef((props, ref) => {
                       <>Sending</>
                     ) : (
                       <>
-                        <FontAwesomeIcon icon={faPaperPlane} style={{ margin: '0 .5em 0 0' }} /> Send
+                        <PaperPlaneRightIcon size={18} weight="bold" className="mr-4" /> Send
                       </>
                     )}
                   </Button>

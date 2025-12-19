@@ -19,12 +19,15 @@
       height: 48px;
       border-radius: 50%;
       text-align: center;
-      line-height: 48px;
+      line-height: 4;
       background: var(--button-background-color);
-      transition: filter 0.3s ease;
+      transition: all 0.3s;
     }
     .link:hover {
-      filter: brightness(110%);
+      svg {
+        color: var(--button-hover-text-color) !important;
+      }
+      box-shadow: 0 0 16px var(--button-hover-glow-color); // glow
     }
 
     svg {

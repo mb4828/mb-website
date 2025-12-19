@@ -5,11 +5,6 @@ import { SITE_NAME, JSON_LD } from '@/components/constants';
 import BaseComponent from '@/components/base.module';
 import { Metadata } from 'next';
 
-// font awesome
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-config.autoAddCss = false;
-
 const opensans = Open_Sans({ subsets: ['latin'] });
 
 const PAGE_TITLE = `${SITE_NAME} - Senior Software Engineer`;

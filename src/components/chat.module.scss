@@ -13,8 +13,37 @@
     height: 48px;
     border-radius: 50%;
     transition: all 0.3s ease;
-    svg {
-      color: var(--header-font-color);
+
+    .chat_icon_wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+
+      &.isOpen {
+        transform: rotateX(180deg);
+      }
+
+      .chat_icon_open,
+      .chat_icon_closed {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 45px;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: translateX(-13px);
+      }
+
+      .chat_icon_open {
+        transform: translateX(-13px) rotateX(180deg);
+      }
+
+      svg {
+        fill: var(--header-font-color) !important;
+        overflow: visible;
+      }
     }
   }
 
@@ -33,7 +62,7 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   overflow-y: hidden;
   z-index: 999;
-  background-color: var(--body-background-color);
+  background-color: var(--body-background-color) !important;
 
   .chat_header {
     background: var(--primary-color);

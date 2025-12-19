@@ -14,12 +14,8 @@
     "@emotion/styled": "^11.14.0",
     "@floating-ui/react": "^0.27.8",
     "@floating-ui/react-dom": "^2.1.2",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/joy": "^5.0.0-beta.51",
+    "@phosphor-icons/react": "^2.1.10",
     "@types/node": "20.6.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -34,9 +30,5 @@
     "schema-dts": "^1.1.2",
     "tech-stack-icons": "^2.1.0",
     "typescript": "5.2.2"
-  },
-  "resolutions": {
-    "brace-expansion": "^1.1.12",
-    "tar-fs": "^2.1.2"
   }
 }
