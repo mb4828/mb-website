@@ -28,7 +28,7 @@ export default function MusicPage() {
             New York City.
           </p>
 
-          <ButtonGroup color="primary" variant="solid" size="lg" spacing={3} className="button-group">
+          <ButtonGroup color="primary" variant="solid" size="lg" spacing={2} className="button-group">
             <Button
               component="a"
               href="https://instagram.com/matt.brauner/"

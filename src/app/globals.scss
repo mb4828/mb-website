@@ -132,17 +132,17 @@ a:hover {
 }
 
 .custom-mui-button {
-  color: var(--button-text-color) !important;
-  background-color: var(--button-background-color) !important;
   text-align: left;
   text-decoration: none;
   transition: all 0.3s;
+  color: var(--button-text-color) !important;
+  background-color: var(--button-background-color) !important;
   z-index: 0 !important;
 }
 .custom-mui-button:hover {
+  text-decoration: none;
   color: var(--button-hover-text-color) !important;
   background-color: var(--button-background-color) !important;
-  text-decoration: none;
   box-shadow: 0 0 16px var(--button-hover-glow-color); // glow
 }
 .custom-mui-button:visited {
@@ -171,6 +171,6 @@ a:hover {
     font-size: 1em;
   }
   .custom-mui-button {
-    padding: 8px 14px !important;
+    padding: 8px 10px !important;
   }
 }
