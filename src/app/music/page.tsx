@@ -6,7 +6,7 @@ import Parallax from '@/components/parallax';
 import Reveal from '@/components/reveal';
 import { Button, ButtonGroup } from '@mui/joy';
 import Link from 'next/link';
-import { ChatTeardropTextIcon, InstagramLogoIcon, FileAudioIcon } from '@phosphor-icons/react';
+import { RiFileMusicLine, RiInstagramLine, RiMailLine } from '@remixicon/react';
 
 export default function MusicPage() {
   const { openChat } = useChat();
@@ -36,11 +36,11 @@ export default function MusicPage() {
               rel="noopener"
               className="custom-mui-button"
             >
-              <InstagramLogoIcon size={20} weight="bold" className="mr-4" />
+              <RiInstagramLine size={20} className="mr-4" />
               View Instagram
             </Button>
             <Button onClick={openChat} className="custom-mui-button">
-              <ChatTeardropTextIcon size={20} weight="bold" className="mr-4" />
+              <RiMailLine size={20} className="mr-4" />
               Contact Matt
             </Button>
           </ButtonGroup>
@@ -127,32 +127,42 @@ export default function MusicPage() {
           <ul>
             <li>
               <Link href="/music/brahms.mp3">
-                <FileAudioIcon size={18} weight="regular" className="mr-4" />
-                <i>Clarinet Quintet, Op.115</i>, Brahms | Colgate University Chamber Players
+                <RiFileMusicLine size={18} />
+                <span>
+                  <i>Clarinet Quintet, Op.115</i>, Brahms | Colgate University Chamber Players
+                </span>
               </Link>
             </li>
             <li>
               <Link href="/music/bartok.mp3">
-                <FileAudioIcon size={18} weight="regular" className="mr-4" />
-                <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
+                <RiFileMusicLine size={18} />
+                <span>
+                  <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
+                </span>
               </Link>
             </li>
             <li>
               <Link href="/music/danzon.mp3">
-                <FileAudioIcon size={18} weight="regular" className="mr-4" />
-                <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
+                <RiFileMusicLine size={18} />
+                <span>
+                  <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
+                </span>
               </Link>
             </li>
             <li>
               <Link href="/music/marquez.mp3">
-                <FileAudioIcon size={18} weight="regular" className="mr-4" />
-                <i>Danzón No. 2</i>, Arturo Márquez | Manhattan Wind Ensemble
+                <RiFileMusicLine size={18} />
+                <span>
+                  <i>Danzón No. 2</i>, Arturo Márquez | Manhattan Wind Ensemble
+                </span>
               </Link>
             </li>
             <li>
               <Link href="/music/gershwin.mp3">
-                <FileAudioIcon size={18} weight="regular" className="mr-4" />
-                <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
+                <RiFileMusicLine size={18} />
+                <span>
+                  <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
+                </span>
               </Link>
             </li>
           </ul>

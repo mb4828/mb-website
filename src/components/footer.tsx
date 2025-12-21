@@ -2,7 +2,7 @@
 
 import styles from './footer.module.scss';
 import Link from 'next/link';
-import { FacebookLogoIcon, GithubLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { RiFacebookLine, RiGithubLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
 
 export default function Footer() {
   const today = new Date();
@@ -17,7 +17,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="Facebook"
         >
-          <FacebookLogoIcon size={28} weight="bold" />
+          <RiFacebookLine size={28} />
         </Link>
 
         <Link
@@ -27,7 +27,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="Instagram"
         >
-          <InstagramLogoIcon size={28} weight="bold" />
+          <RiInstagramLine size={28} />
         </Link>
 
         <Link
@@ -37,7 +37,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="LinkedIn"
         >
-          <LinkedinLogoIcon size={28} weight="bold" />
+          <RiLinkedinLine size={28} />
         </Link>
 
         <Link
@@ -47,7 +47,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="GitHub"
         >
-          <GithubLogoIcon size={28} weight="bold" />
+          <RiGithubLine size={28} />
         </Link>
       </div>
 

@@ -15,7 +15,7 @@
     "@floating-ui/react": "^0.27.8",
     "@floating-ui/react-dom": "^2.1.2",
     "@mui/joy": "^5.0.0-beta.51",
-    "@phosphor-icons/react": "^2.1.10",
+    "@remixicon/react": "^4.7.0",
     "@types/node": "20.6.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",

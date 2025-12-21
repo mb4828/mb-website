@@ -16,7 +16,7 @@ import {
 import { CssVarsProvider } from '@mui/joy/styles';
 import { FormEvent, forwardRef, useImperativeHandle, useState } from 'react';
 import { useFloating, autoUpdate } from '@floating-ui/react';
-import { ChatTeardropTextIcon, PaperPlaneRightIcon, XIcon } from '@phosphor-icons/react';
+import { RiCloseLine, RiMailLine, RiMailSendLine } from '@remixicon/react';
 
 const Chat = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,10 +83,10 @@ const Chat = forwardRef((props, ref) => {
         >
           <div className={`${styles.chat_icon_wrapper} ${isOpenIcon ? styles.isOpen : ''}`}>
             <div className={styles.chat_icon_closed}>
-              <ChatTeardropTextIcon size={26} weight="bold" />
+              <RiMailLine size={26} />
             </div>
             <div className={styles.chat_icon_open}>
-              <XIcon size={26} weight="bold" />
+              <RiCloseLine size={26} />
             </div>
           </div>
         </Button>
@@ -150,7 +150,7 @@ const Chat = forwardRef((props, ref) => {
                       <>Sending</>
                     ) : (
                       <>
-                        <PaperPlaneRightIcon size={18} weight="bold" className="mr-4" /> Send
+                        <RiMailSendLine size={18} className="mr-4" /> Send
                       </>
                     )}
                   </Button>

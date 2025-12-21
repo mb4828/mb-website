@@ -2,6 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 3em;
+
+  li a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    svg {
+      min-width: 18px;
+    }
+  }
 }
 
 .flat {

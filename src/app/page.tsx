@@ -8,7 +8,7 @@ import StackIcon from 'tech-stack-icons';
 import Tooltip from '@mui/joy/Tooltip';
 import { Button, ButtonGroup } from '@mui/joy';
 import { useChat } from '@/components/chat-context';
-import { ChatTeardropTextIcon, UserListIcon } from '@phosphor-icons/react';
+import { RiContactsLine, RiFileUserLine, RiMailLine } from '@remixicon/react';
 
 export default function WorkPage() {
   const { openChat } = useChat();
@@ -59,11 +59,11 @@ export default function WorkPage() {
                 rel="noopener"
                 className="custom-mui-button"
               >
-                <UserListIcon size={20} weight="bold" className="mr-4" />
+                <RiContactsLine size={20} className="mr-4" />
                 View Resume
               </Button>
               <Button onClick={openChat} className="custom-mui-button">
-                <ChatTeardropTextIcon size={20} weight="bold" className="mr-4" />
+                <RiMailLine size={20} className="mr-4" />
                 Contact Matt
               </Button>
             </ButtonGroup>
