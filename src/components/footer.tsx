@@ -17,7 +17,7 @@ export default function Footer() {
           rel="noopener"
           aria-label="Facebook"
         >
-          <RiFacebookLine size={28} />
+          <RiFacebookLine size={28} style={{ position: 'relative', left: '-.75px', top: '.75px' }} />
         </Link>
 
         <Link

@@ -1,0 +1,85 @@
+.audioPlayer {
+  display: inline-block;
+  color: var(--secondary-color);
+
+  small {
+    font-size: 80%;
+  }
+
+  .playButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .iconContainer {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      position: relative;
+
+      svg {
+        position: absolute;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .spinner {
+        animation: spin 1s linear infinite, fadeIn 0.3s ease-in-out;
+      }
+    }
+
+    .titleContainer {
+      display: inline;
+      text-align: left;
+
+      .desktop {
+        display: inline;
+      }
+
+      .mobile {
+        display: none;
+      }
+
+      @media (max-width: 800px) {
+        .desktop {
+          display: none;
+        }
+
+        .mobile {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

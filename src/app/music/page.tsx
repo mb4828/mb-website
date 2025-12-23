@@ -4,9 +4,10 @@ import { useChat } from '@/components/chat-context';
 import styles from './page.module.scss';
 import Parallax from '@/components/parallax';
 import Reveal from '@/components/reveal';
-import { Button, ButtonGroup } from '@mui/joy';
+import AudioPlayer from '@/components/audio-player';
 import Link from 'next/link';
-import { RiFileMusicLine, RiInstagramLine, RiMailLine } from '@remixicon/react';
+import { Button, ButtonGroup } from '@mui/joy';
+import { RiInstagramLine, RiMailLine } from '@remixicon/react';
 
 export default function MusicPage() {
   const { openChat } = useChat();
@@ -126,44 +127,39 @@ export default function MusicPage() {
           <h2>Recordings</h2>
           <ul>
             <li>
-              <Link href="/music/brahms.mp3">
-                <RiFileMusicLine size={18} />
-                <span>
-                  <i>Clarinet Quintet, Op.115</i>, Brahms | Colgate University Chamber Players
-                </span>
-              </Link>
+              <AudioPlayer
+                href="/music/brahms.mp3"
+                title="Clarinet Quintet, Op.115, Brahms"
+                subtitle="Colgate University Chamber Players"
+              />
             </li>
             <li>
-              <Link href="/music/bartok.mp3">
-                <RiFileMusicLine size={18} />
-                <span>
-                  <i>Contrasts, Sz.111</i>, Bartók | Colgate University Chamber Players
-                </span>
-              </Link>
+              <AudioPlayer
+                href="/music/bartok.mp3"
+                title="Contrasts, Sz.111, Bartók"
+                subtitle="Colgate University Chamber Players"
+              />
             </li>
             <li>
-              <Link href="/music/danzon.mp3">
-                <RiFileMusicLine size={18} />
-                <span>
-                  <i>Danzón</i>, Paquito D&apos;Rivera | Colgate University Chamber Players
-                </span>
-              </Link>
+              <AudioPlayer
+                href="/music/danzon.mp3"
+                title="Danzón, Paquito D'Rivera"
+                subtitle="Colgate University Chamber Players"
+              />
             </li>
             <li>
-              <Link href="/music/marquez.mp3">
-                <RiFileMusicLine size={18} />
-                <span>
-                  <i>Danzón No. 2</i>, Arturo Márquez | Manhattan Wind Ensemble
-                </span>
-              </Link>
+              <AudioPlayer
+                href="/music/marquez.mp3"
+                title="Danzón No. 2, Arturo Márquez"
+                subtitle="Manhattan Wind Ensemble"
+              />
             </li>
             <li>
-              <Link href="/music/gershwin.mp3">
-                <RiFileMusicLine size={18} />
-                <span>
-                  <i>Rhapsody in Blue</i>, Gershwin | Colgate University Orchestra
-                </span>
-              </Link>
+              <AudioPlayer
+                href="/music/gershwin.mp3"
+                title="Rhapsody in Blue, Gershwin"
+                subtitle="Colgate University Orchestra"
+              />
             </li>
           </ul>
         </Reveal>
