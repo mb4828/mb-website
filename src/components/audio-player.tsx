@@ -1,18 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import {
-  RiPlayFill,
-  RiPauseFill,
-  RiLoader4Line,
-  RiLoader2Line,
-  RiLoaderLine,
-  RiLoader5Line,
-  RiPauseLine,
-  RiPauseCircleLine,
-  RiPlayCircleLine,
-  RiPauseCircleFill,
-} from '@remixicon/react';
+import { RiLoader5Line, RiPlayCircleLine, RiPauseCircleFill } from '@remixicon/react';
 import styles from './audio-player.module.scss';
 
 interface AudioPlayerProps {

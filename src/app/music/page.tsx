@@ -1,13 +1,13 @@
 'use client';
 
-import { useChat } from '@/components/chat-context';
 import styles from './page.module.scss';
+import { useChat } from '@/components/chat-context';
+import { Button, ButtonGroup } from '@mui/joy';
+import { RiInstagramLine, RiMailLine } from '@remixicon/react';
 import Parallax from '@/components/parallax';
 import Reveal from '@/components/reveal';
 import AudioPlayer from '@/components/audio-player';
 import Link from 'next/link';
-import { Button, ButtonGroup } from '@mui/joy';
-import { RiInstagramLine, RiMailLine } from '@remixicon/react';
 
 export default function MusicPage() {
   const { openChat } = useChat();
