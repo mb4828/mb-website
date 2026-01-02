@@ -85,13 +85,13 @@ export default function MusicPage() {
 
             <li>
               <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra
+                Jackson Heights Orchestra <sup>𝄞</sup>
               </Link>
             </li>
 
             <li>
               <Link href="https://manhattanwindensemble.com/" target="_blank" rel="noopener">
-                Manhattan Wind Ensemble
+                Manhattan Wind Ensemble <sup>𝄞</sup>
               </Link>
             </li>
 
@@ -107,7 +107,7 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Orchestra
+                Colgate University Orchestra <sup>𝄞</sup>
               </Link>
             </li>
 
@@ -117,10 +117,13 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Chamber Players
+                Colgate University Chamber Players <sup>𝄞</sup>
               </Link>
             </li>
           </ul>
+          <p className="mt-12">
+            <sup>𝄞</sup> Principal
+          </p>
         </Reveal>
 
         <Reveal>
