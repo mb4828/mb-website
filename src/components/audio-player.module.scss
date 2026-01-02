@@ -83,3 +83,44 @@
     opacity: 1;
   }
 }
+
+/* ripple effect when playing: expands circle + glow matching custom button hover */
+.iconContainer.playing {
+  svg {
+    filter: drop-shadow(0 0 6px var(--button-hover-glow-color));
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 0 8px var(--button-hover-glow-color);
+    opacity: 0.9;
+    pointer-events: none;
+    animation: ripple 1.2s ease-out infinite;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+    box-shadow: 0 0 6px var(--button-hover-glow-color);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0.28;
+    box-shadow: 0 0 10px var(--button-hover-glow-color);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0);
+  }
+}

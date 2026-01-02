@@ -73,7 +73,7 @@ export default function AudioPlayer({ href, title, subtitle }: AudioPlayerProps)
   return (
     <div className={styles.audioPlayer}>
       <button onClick={togglePlayPause} className={styles.playButton}>
-        <span className={styles.iconContainer}>
+        <span className={`${styles.iconContainer} ${isPlaying && !isLoading ? styles.playing : ''}`}>
           {isLoading ? (
             <RiLoader5Line size={20} className={styles.spinner} />
           ) : isPlaying ? (
