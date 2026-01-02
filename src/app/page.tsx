@@ -8,7 +8,7 @@ import StackIcon from 'tech-stack-icons';
 import Tooltip from '@mui/joy/Tooltip';
 import { Button, ButtonGroup } from '@mui/joy';
 import { useChat } from '@/components/chat-context';
-import { RiContactsLine, RiFileUserLine, RiMailLine } from '@remixicon/react';
+import { RiLinkedinBoxLine, RiMailLine } from '@remixicon/react';
 
 export default function WorkPage() {
   const { openChat } = useChat();
@@ -41,7 +41,7 @@ export default function WorkPage() {
         <div className={styles.content_grid}>
           <Reveal className={styles.full_width} revealOnLoad>
             <p className="text-center text-lead">
-              Matt is a Senior Software Engineer based in New York City with {yearsExp} years of experience in tech
+              Matt is a lead software engineer based in New York City with {yearsExp} years of experience in tech
               leadership, full-stack web development, financial technology, and data analysis. With a Bachelor&apos;s
               Degree in Computer Science and Economics from{' '}
               <Link href="https://colgate.edu" target="_blank" rel="noopener">
@@ -54,13 +54,13 @@ export default function WorkPage() {
             <ButtonGroup color="primary" variant="solid" size="lg" spacing={2} className="button-group">
               <Button
                 component="a"
-                href="/Matt Brauner Resume Web.pdf"
+                href="https://linkedin.com/in/matt-brauner/"
                 target="_blank"
                 rel="noopener"
                 className="custom-mui-button"
               >
-                <RiContactsLine size={20} className="mr-4" />
-                View Resume
+                <RiLinkedinBoxLine size={20} className="mr-4" />
+                View LinkedIn
               </Button>
               <Button onClick={openChat} className="custom-mui-button">
                 <RiMailLine size={20} className="mr-4" />
