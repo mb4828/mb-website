@@ -3,7 +3,7 @@
 import styles from './page.module.scss';
 import { useChat } from '@/components/chat-context';
 import { Button, ButtonGroup } from '@mui/joy';
-import { RiInstagramLine, RiMailLine } from '@remixicon/react';
+import { RiInstagramLine, RiMailLine, RiMusicFill } from '@remixicon/react';
 import Parallax from '@/components/parallax';
 import Reveal from '@/components/reveal';
 import AudioPlayer from '@/components/audio-player';
@@ -85,13 +85,15 @@ export default function MusicPage() {
 
             <li>
               <Link href="https://jhorchestra.org/" target="_blank" rel="noopener">
-                Jackson Heights Orchestra <sup>𝄞</sup>
+                Jackson Heights Orchestra
+                <RiMusicFill size={14} />
               </Link>
             </li>
 
             <li>
               <Link href="https://manhattanwindensemble.com/" target="_blank" rel="noopener">
-                Manhattan Wind Ensemble <sup>𝄞</sup>
+                Manhattan Wind Ensemble
+                <RiMusicFill size={14} />
               </Link>
             </li>
 
@@ -107,7 +109,8 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Orchestra <sup>𝄞</sup>
+                Colgate University Orchestra
+                <RiMusicFill size={14} />
               </Link>
             </li>
 
@@ -117,12 +120,14 @@ export default function MusicPage() {
                 target="_blank"
                 rel="noopener"
               >
-                Colgate University Chamber Players <sup>𝄞</sup>
+                Colgate University Chamber Players
+                <RiMusicFill size={14} />
               </Link>
             </li>
           </ul>
           <p className="mt-12">
-            <sup>𝄞</sup> Principal
+            <RiMusicFill size={14} />
+            &nbsp; Denotes Principal
           </p>
         </Reveal>
 
