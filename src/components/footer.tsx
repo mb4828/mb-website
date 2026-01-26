@@ -2,7 +2,7 @@
 
 import styles from './footer.module.scss';
 import Link from 'next/link';
-import { RiFacebookLine, RiGithubLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
+import { RiGithubLine, RiInstagramLine, RiLinkedinBoxLine } from '@remixicon/react';
 
 export default function Footer() {
   const today = new Date();
@@ -12,12 +12,12 @@ export default function Footer() {
       <div className={styles.social_links}>
         <Link
           className={styles.link}
-          href="https://facebook.com/matt.brauner/"
+          href="https://linkedin.com/in/matt-brauner/"
           target="_blank"
           rel="noopener"
-          aria-label="Facebook"
+          aria-label="LinkedIn"
         >
-          <RiFacebookLine size={28} style={{ position: 'relative', left: '-.75px', top: '.75px' }} />
+          <RiLinkedinBoxLine size={28} />
         </Link>
 
         <Link
@@ -28,16 +28,6 @@ export default function Footer() {
           aria-label="Instagram"
         >
           <RiInstagramLine size={28} />
-        </Link>
-
-        <Link
-          className={styles.link}
-          href="https://linkedin.com/in/matt-brauner/"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-        >
-          <RiLinkedinLine size={28} />
         </Link>
 
         <Link
