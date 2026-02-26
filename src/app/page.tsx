@@ -152,7 +152,7 @@ export default function WorkPage() {
                     </div>
                   </Tooltip>
                   <Link href="https://github.com/mb4828/PGChess" target="_blank" rel="noopener">
-                    Python Chess App
+                    Chess App
                   </Link>
                 </li>
                 <li>
@@ -162,7 +162,7 @@ export default function WorkPage() {
                     </div>
                   </Tooltip>
                   <Link href="https://github.com/mb4828/pi-rgb-smart-clock" target="_blank" rel="noopener">
-                    Python RGB smart clock
+                    RGB smart clock
                   </Link>
                 </li>
               </ul>
