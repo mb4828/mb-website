@@ -42,27 +42,37 @@
   .skills {
     ul {
       display: inline;
-
       li {
-        display: inline-block;
-        background: var(--body-background-color);
-        border-radius: 50%;
-        text-align: center;
-        width: 34px;
-        height: 34px;
-        line-height: 34px;
         margin-right: 8px;
-
-        span {
-          height: 34px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          svg {
-            width: 24px;
-          }
-        }
       }
+    }
+  }
+
+  .projects {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
+
+.skill_icon {
+  display: inline-block;
+  background: var(--body-background-color);
+  border-radius: 50%;
+  text-align: center;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+
+  span {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 24px;
     }
   }
 }
