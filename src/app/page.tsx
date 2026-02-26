@@ -152,7 +152,7 @@ export default function WorkPage() {
                     </div>
                   </Tooltip>
                   <Link href="https://github.com/mb4828/PGChess" target="_blank" rel="noopener">
-                    Chess App
+                    PGChess App
                   </Link>
                 </li>
                 <li>
