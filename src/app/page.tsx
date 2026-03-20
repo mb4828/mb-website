@@ -76,7 +76,7 @@ export default function WorkPage() {
                 {skills
                   .sort((a, b) => (a.label < b.label ? -1 : 1))
                   .map((skill) => (
-                    <li key={skill.name}>
+                    <li key={skill.name} className={styles.skill_icon}>
                       <Tooltip title={skill.label} variant="plain" arrow>
                         <div>
                           <StackIcon name={skill.name} />
@@ -112,38 +112,57 @@ export default function WorkPage() {
               <h2>Projects</h2>
               <ul>
                 <li>
-                  <Link href="https://logbook.mattbrauner.com" target="_blank" rel="noopener">
-                    My flight logbook
-                  </Link>
-                  {' [ '}
-                  <Link href="https://github.com/mb4828/my-flight-log" target="_blank" rel="noopener">
-                    GitHub
-                  </Link>
-                  {' ]'}
-                </li>
-                <li>
-                  <Link href="https://notepad.mattbrauner.com" target="_blank" rel="noopener">
-                    Offline text editor
-                  </Link>
-                  {' [ '}
-                  <Link href="https://github.com/mb4828/offline-text-editor" target="_blank" rel="noopener">
-                    GitHub
-                  </Link>
-                  {' ]'}
-                </li>
-                <li>
+                  <Tooltip title="React" variant="plain" arrow className={styles.skill_icon}>
+                    <div>
+                      <StackIcon name="reactjs" />
+                    </div>
+                  </Tooltip>
                   <Link href="https://mb4828.github.io/mta-subway-map/" target="_blank" rel="noopener">
                     NYC subway map
                   </Link>
-                  {' [ '}
-                  <Link href="https://github.com/mb4828/mta-subway-map" target="_blank" rel="noopener">
-                    GitHub
-                  </Link>
-                  {' ]'}
+                  <span>
+                    {' [ '}
+                    <Link href="https://github.com/mb4828/mta-subway-map" target="_blank" rel="noopener">
+                      GitHub
+                    </Link>
+                    {' ] '}
+                  </span>
                 </li>
                 <li>
+                  <Tooltip title="React" variant="plain" arrow className={styles.skill_icon}>
+                    <div>
+                      <StackIcon name="reactjs" />
+                    </div>
+                  </Tooltip>
+                  <Link href="https://logbook.mattbrauner.com" target="_blank" rel="noopener">
+                    My flight logbook
+                  </Link>
+                  <span>
+                    {' [ '}
+                    <Link href="https://github.com/mb4828/my-flight-log/tree/main/app" target="_blank" rel="noopener">
+                      GitHub
+                    </Link>
+                    {' ]'}
+                  </span>
+                </li>
+                <li>
+                  <Tooltip title="Python" variant="plain" arrow className={styles.skill_icon}>
+                    <div>
+                      <StackIcon name="python" />
+                    </div>
+                  </Tooltip>
+                  <Link href="https://github.com/mb4828/PGChess" target="_blank" rel="noopener">
+                    PGChess App
+                  </Link>
+                </li>
+                <li>
+                  <Tooltip title="Python" variant="plain" arrow className={styles.skill_icon}>
+                    <div>
+                      <StackIcon name="python" />
+                    </div>
+                  </Tooltip>
                   <Link href="https://github.com/mb4828/pi-rgb-smart-clock" target="_blank" rel="noopener">
-                    Python RGB smart clock
+                    RGB smart clock
                   </Link>
                 </li>
               </ul>
