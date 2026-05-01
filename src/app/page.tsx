@@ -117,12 +117,12 @@ export default function WorkPage() {
                       <StackIcon name="reactjs" />
                     </div>
                   </Tooltip>
-                  <Link href="https://mb4828.github.io/mta-subway-map/" target="_blank" rel="noopener">
+                  <Link href="https://subway.mattbrauner.com" target="_blank" rel="noopener">
                     NYC subway map
                   </Link>
                   <span>
                     {' [ '}
-                    <Link href="https://github.com/mb4828/mta-subway-map" target="_blank" rel="noopener">
+                    <Link href="https://subway.mattbrauner.com" target="_blank" rel="noopener">
                       GitHub
                     </Link>
                     {' ] '}
