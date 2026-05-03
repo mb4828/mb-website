@@ -122,7 +122,7 @@ export default function WorkPage() {
                   </Link>
                   <span>
                     {' [ '}
-                    <Link href="https://subway.mattbrauner.com" target="_blank" rel="noopener">
+                    <Link href="https://github.com/mb4828/mta-subway-map" target="_blank" rel="noopener">
                       GitHub
                     </Link>
                     {' ] '}
