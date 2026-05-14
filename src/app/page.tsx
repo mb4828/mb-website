@@ -41,7 +41,7 @@ export default function WorkPage() {
         <div className={styles.content_grid}>
           <Reveal className={styles.full_width} revealOnLoad>
             <p className="text-center text-lead">
-              Matt is a lead software engineer based in New York City with {yearsExp} years of experience in tech
+              Matt is a lead software engineer based in New York City with {yearsExp}{' '}years of experience in tech
               leadership, full-stack web development, financial technology, and data analysis. With a Bachelor&apos;s
               Degree in Computer Science and Economics from{' '}
               <Link href="https://colgate.edu" target="_blank" rel="noopener">
