@@ -136,6 +136,13 @@ export default function MusicPage() {
           <ul>
             <li>
               <AudioPlayer
+                href="/music/blueshades.mp3"
+                title="Blue Shades, Frank Ticheli"
+                subtitle="Manhattan Wind Ensemble"
+              />
+            </li>
+            <li>
+              <AudioPlayer
                 href="/music/brahms.mp3"
                 title="Clarinet Quintet, Op.115, Brahms"
                 subtitle="Colgate University Chamber Players"
