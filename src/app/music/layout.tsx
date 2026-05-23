@@ -1,9 +1,9 @@
 import { SITE_NAME } from '@/components/constants';
 import { Metadata } from 'next';
 
-const PAGE_TITLE = `${SITE_NAME} - Clarinetist & Saxophonist`;
+const PAGE_TITLE = `${SITE_NAME} - Clarinetist`;
 const PAGE_DESC =
-  'Matt Brauner is a New York City based amateur clarinetist and saxophonist with over 20 years of performance experience';
+  'Matt Brauner is a New York City based amateur clarinetist with over 20 years of performance experience';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

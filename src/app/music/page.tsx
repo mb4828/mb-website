@@ -19,8 +19,8 @@ export default function MusicPage() {
       <main className={styles.main}>
         <Reveal revealOnLoad>
           <p className="text-center text-lead">
-            Matt is an amateur clarinetist and saxophonist with over 20 years of performance experience. He began
-            studying clarinet at age 9 under the guidance of Scott Singer. Inspired by his grandfather,&nbsp;
+            Matt is an amateur clarinetist with over 20 years of performance experience. He began studying clarinet at
+            age 9 under the guidance of Scott Singer. Inspired by his grandfather,&nbsp;
             <Link href="https://en.wikipedia.org/wiki/Buzz_Brauner" target="_blank" rel="noopener">
               Buzz Brauner
             </Link>
