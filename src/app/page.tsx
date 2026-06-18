@@ -134,8 +134,8 @@ export default function WorkPage() {
                       <StackIcon name="reactjs" />
                     </div>
                   </Tooltip>
-                  <Link href="https://logbook.mattbrauner.com" target="_blank" rel="noopener">
-                    My flight logbook
+                  <Link href="https://flightlog.mattbrauner.com" target="_blank" rel="noopener">
+                    My flight log
                   </Link>
                   <span>
                     {' [ '}
