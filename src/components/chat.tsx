@@ -60,7 +60,7 @@ const Chat = forwardRef((props, ref) => {
     setFormData({ ...formData, status: 'loading' });
 
     const body = JSON.stringify({ name: formData.name, email: formData.email, message: formData.message });
-    const response = await axios.post('https://f22uyn4vtfmymrei6jdxtm6f7u0xomsz.lambda-url.us-east-1.on.aws/', body);
+    const response = await axios.post('https://api.mattbrauner.com/email', body);
     if (response.status === 200) {
       setFormData({ name: '', email: '', message: '', status: 'sent' });
     } else {
