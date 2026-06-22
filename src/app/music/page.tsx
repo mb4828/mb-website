@@ -59,7 +59,7 @@ export default function MusicPage() {
         </Reveal>
 
         <Reveal>
-          <h2>Ensembles Worked With</h2>
+          <h2>Ensembles Played With</h2>
           <ul>
             <li>
               <Link href="https://www.centresymphony.com" target="_blank" rel="noopener">
