@@ -60,7 +60,7 @@ export default function MusicPage() {
 
         <Reveal>
           <h2>Ensembles Played With</h2>
-          <ul>
+          <ul className={`${styles.columnList} ${styles.ensemblesList}`}>
             <li>
               <Link href="https://www.centresymphony.com" target="_blank" rel="noopener">
                 Centre Symphony Orchestra
@@ -133,7 +133,7 @@ export default function MusicPage() {
 
         <Reveal>
           <h2>Recordings</h2>
-          <ul>
+          <ul className={`${styles.columnList} ${styles.recordingsList}`}>
             <li>
               <AudioPlayer
                 href="/music/blueshades.mp3"

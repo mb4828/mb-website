@@ -16,3 +16,24 @@
 .flat {
   margin: 0 -2px;
 }
+
+.columnList {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2em;
+}
+
+.ensemblesList {
+  grid-template-rows: repeat(4, auto);
+}
+
+.recordingsList {
+  grid-template-rows: repeat(3, auto);
+}
+
+@media (max-width: 1000px) {
+  .columnList {
+    display: block;
+  }
+}
