@@ -9,28 +9,41 @@ import Tooltip from '@mui/joy/Tooltip';
 import { Button, ButtonGroup } from '@mui/joy';
 import { useChat } from '@/components/chat-context';
 import { RiLinkedinBoxLine, RiMailLine } from '@remixicon/react';
+import { useEffect, useState } from 'react';
 
 export default function WorkPage() {
   const { openChat } = useChat();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateDarkMode = () => setIsDarkMode(mediaQuery.matches);
+
+    updateDarkMode();
+    mediaQuery.addEventListener('change', updateDarkMode);
+
+    return () => mediaQuery.removeEventListener('change', updateDarkMode);
+  }, []);
+
   const today = new Date();
   const yearsExp = today.getFullYear() - 2015;
   const skills = [
-    { name: 'js', label: 'Javascript' },
-    { name: 'typescript', label: 'Typescript' },
-    { name: 'jquery', label: 'jQuery' },
-    { name: 'html5', label: 'HTML5' },
-    { name: 'css3', label: 'CSS3' },
-    { name: 'angular17', label: 'Angular' },
-    { name: 'reactjs', label: 'React' },
     { name: 'python', label: 'Python' },
-    { name: 'django', label: 'Django' },
+    { name: 'typescript', label: 'Typescript' },
     { name: 'java', label: 'Java' },
+    { name: 'angular17', label: 'Angular' },
+    { name: 'react', label: 'React' },
+    { name: 'aws', label: 'AWS' },
+    { name: 'azure', label: 'Azure' },
+    { name: 'cloudflare', label: 'Cloudflare' },
+    { name: 'kubernetes', label: 'Kubernetes' },
     { name: 'docker', label: 'Docker' },
-    { name: 'wordpress', label: 'Wordpress' },
-    { name: 'mysql', label: 'MySQL' },
     { name: 'cassandradb', label: 'Cassandra' },
+    { name: 'postgresql', label: 'PostgreSQL' },
+    { name: 'snowflake', label: 'Snowflake' },
+    { name: 'pandas', label: 'Spark/Pandas' },
+    { name: 'openai', label: 'OpenAI' },
     { name: 'bash', label: 'Bash' },
-    { name: 'git', label: 'Git' },
   ];
 
   return (
@@ -41,7 +54,7 @@ export default function WorkPage() {
         <div className={styles.content_grid}>
           <Reveal className={styles.full_width} revealOnLoad>
             <p className="text-center text-lead">
-              Matt is a lead software engineer based in New York City with {yearsExp}{' '}years of experience in tech
+              Matt is a senior lead software engineer based in New York City with {yearsExp} years of experience in tech
               leadership, full-stack web development, financial technology, and data analysis. With a Bachelor&apos;s
               Degree in Computer Science and Economics from{' '}
               <Link href="https://colgate.edu" target="_blank" rel="noopener">
@@ -73,17 +86,15 @@ export default function WorkPage() {
             <Reveal className={`${styles.third_width} ${styles.skills}`}>
               <h2>Skills</h2>
               <ul>
-                {skills
-                  .sort((a, b) => (a.label < b.label ? -1 : 1))
-                  .map((skill) => (
-                    <li key={skill.name} className={styles.skill_icon}>
-                      <Tooltip title={skill.label} variant="plain" arrow>
-                        <div>
-                          <StackIcon name={skill.name} />
-                        </div>
-                      </Tooltip>
-                    </li>
-                  ))}
+                {skills.map((skill) => (
+                  <li key={skill.name} className={styles.skill_icon}>
+                    <Tooltip title={skill.label} variant="plain" arrow>
+                      <div>
+                        <StackIcon name={skill.name} variant={isDarkMode ? 'dark' : 'light'} />
+                      </div>
+                    </Tooltip>
+                  </li>
+                ))}
               </ul>
             </Reveal>
 
@@ -114,7 +125,7 @@ export default function WorkPage() {
                 <li>
                   <Tooltip title="React" variant="plain" arrow className={styles.skill_icon}>
                     <div>
-                      <StackIcon name="reactjs" />
+                      <StackIcon name="react" variant={isDarkMode ? 'dark' : 'light'} />
                     </div>
                   </Tooltip>
                   <Link href="https://subway.mattbrauner.com" target="_blank" rel="noopener">
@@ -131,7 +142,7 @@ export default function WorkPage() {
                 <li>
                   <Tooltip title="React" variant="plain" arrow className={styles.skill_icon}>
                     <div>
-                      <StackIcon name="reactjs" />
+                      <StackIcon name="react" variant={isDarkMode ? 'dark' : 'light'} />
                     </div>
                   </Tooltip>
                   <Link href="https://flightlog.mattbrauner.com" target="_blank" rel="noopener">
@@ -148,7 +159,7 @@ export default function WorkPage() {
                 <li>
                   <Tooltip title="Python" variant="plain" arrow className={styles.skill_icon}>
                     <div>
-                      <StackIcon name="python" />
+                      <StackIcon name="python" variant={isDarkMode ? 'dark' : 'light'} />
                     </div>
                   </Tooltip>
                   <Link href="https://github.com/mb4828/PGChess" target="_blank" rel="noopener">
@@ -158,7 +169,7 @@ export default function WorkPage() {
                 <li>
                   <Tooltip title="Python" variant="plain" arrow className={styles.skill_icon}>
                     <div>
-                      <StackIcon name="python" />
+                      <StackIcon name="python" variant={isDarkMode ? 'dark' : 'light'} />
                     </div>
                   </Tooltip>
                   <Link href="https://github.com/mb4828/pi-rgb-smart-clock" target="_blank" rel="noopener">
