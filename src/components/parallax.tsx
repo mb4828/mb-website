@@ -32,8 +32,8 @@ export default function Parallax({
       const windowYOffset = window.pageYOffset;
       const wrapperHeight = document.getElementById(styles.wrapper)?.offsetHeight ?? 0;
       if (el && el2) {
-        el.style.backgroundPosition = '50% ' + (windowYOffset * 0.6 + 1) + 'px';
-        el2.style.backgroundPositionY = wrapperHeight / yOffset + windowYOffset * 0.3 + 1 + 'px';
+        el.style.backgroundPosition = '50% ' + windowYOffset * 0.6 + 'px';
+        el2.style.backgroundPositionY = wrapperHeight / yOffset + windowYOffset * 0.3 + 'px';
       }
     }
 

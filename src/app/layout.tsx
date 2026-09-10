@@ -3,6 +3,7 @@ import { Open_Sans } from 'next/font/google';
 import Script from 'next/script';
 import { SITE_NAME, JSON_LD } from '@/components/constants';
 import BaseComponent from '@/components/base.module';
+import LiquidGlassFilter from '@/components/liquid-glass-filter';
 import { Metadata } from 'next';
 
 const opensans = Open_Sans({ subsets: ['latin'] });
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="ld+json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </head>
       <body className={opensans.className}>
+        <LiquidGlassFilter />
         {/* Google Tag Manager */}
         <noscript>
           <iframe

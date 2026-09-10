@@ -77,7 +77,7 @@ const Chat = forwardRef((props, ref) => {
         <Button
           size="lg"
           onClick={openChat}
-          className={`${styles.chat_button} blue_raised_glossy`}
+          className={`${styles.chat_button} blue_liquid_glass liquid_glass_border`}
           aria-label="Contact Matt"
           ref={refs.setReference}
         >
