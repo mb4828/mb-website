@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect } from 'react';
+
 const displacementMap = encodeURIComponent(`
   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
     <defs>
@@ -15,6 +19,14 @@ const displacementMap = encodeURIComponent(`
 `);
 
 export default function LiquidGlassFilter() {
+  useEffect(() => {
+    const chromiumUserAgent = ['Chrome/', 'Chromium/', 'Edg/', 'OPR/'].some((token) =>
+      navigator.userAgent.includes(token)
+    ) && !['CriOS/', 'FxiOS/'].some((token) => navigator.userAgent.includes(token));
+
+    document.documentElement.classList.toggle('chromium', chromiumUserAgent);
+  }, []);
+
   return (
     <svg aria-hidden="true" focusable="false" width="0" height="0" className="liquid-glass-filter">
       <filter
